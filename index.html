@@ -4,194 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divesh Bhalotiya</title>
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
+            background-color: #e0f2fe; /* Soft sky blue background */
+            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            color: #30312d;
-            background: #f4f1e9;
-            font-family: Arial, sans-serif;
+            padding: 0;
         }
-
-        .hero,
-        main {
-            max-width: 1100px;
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-            padding-right: 32px;
-            padding-left: 32px;
+            padding: 100px 40px;
         }
-
-        .hero {
-            padding-top: 90px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid #d8d2c6;
-        }
-
         h1 {
-            margin: 0 0 24px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(56px, 9vw, 110px);
-            line-height: 0.95;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 5em;
             font-weight: normal;
+            line-height: 1.1;
+            margin: 0 0 20px 0;
+            letter-spacing: -1px;
+            color: #1a1a1a;
         }
-
-        .intro {
-            max-width: 720px;
-            color: #66645e;
-            font-size: 20px;
-            line-height: 1.8;
+        .description {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 60px;
         }
-
-        .contact {
-            margin-top: 28px;
-            color: #66645e;
-            line-height: 1.9;
-        }
-
-        main {
-            padding-top: 24px;
-            padding-bottom: 60px;
-        }
-
-        section {
-            display: grid;
-            grid-template-columns: 230px 1fr;
-            gap: 34px;
-            padding: 28px 0;
-            border-bottom: 1px solid #d8d2c6;
-        }
-
-        h2 {
-            margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 30px;
-            font-weight: normal;
-        }
-
-        h3 {
-            margin: 0 0 10px;
-            font-size: 19px;
-            font-weight: normal;
-        }
-
-        p {
-            margin-top: 0;
-            line-height: 1.8;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 22px;
-        }
-
-        li {
-            margin-bottom: 18px;
-            line-height: 1.7;
-        }
-
         a {
-            color: #465c70;
+            color: #0077cc; /* Slightly adjusted link color to look better on blue */
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
-        @media (max-width: 650px) {
-            .hero {
-                padding-top: 56px;
-            }
-
-            section {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
+        .divider {
+            border-top: 1px solid #b9dcf2; /* Adjusted divider color to match the sky theme */
+            margin-bottom: 60px;
+        }
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+        .section-title {
+            flex: 1;
+            min-width: 200px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.8em;
+            font-weight: normal;
+            margin: 0 0 20px 0;
+            color: #1a1a1a;
+        }
+        .section-content {
+            flex: 2;
+            min-width: 300px;
+            line-height: 1.6;
+        }
+        .project-block {
+            margin-bottom: 30px;
+        }
+        .project-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #1a1a1a;
+        }
+        .project-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1>Divesh<br>Bhalotiya</h1>
 
-        <p class="intro">
-            I am pursuing an M.Sc. in Mathematics at Harish-Chandra Research Institute.
-        </p>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Divesh Bhalotiya</h1>
+            <div class="description">
+                Master's Student in Mathematics<br>
+                Harish-Chandra Research Institute<br>
+                Email: <a href="mailto:diveshbhalotiya02@gmail.com">diveshbhalotiya02@gmail.com</a>
+            </div>
+        </header>
 
-        <div class="contact">
-            Master's Student in Mathematics<br>
-            Harish-Chandra Research Institute<br>
-            Email:
-            <a href="mailto:diveshbhalotiya02@gmail.com">
-                diveshbhalotiya02@gmail.com
-            </a>
+        <div class="divider"></div>
+
+        <!-- About Section -->
+        <div class="section" id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="section-content">
+                <p>I am currently pursuing my M.Sc. in Mathematics at Harish-Chandra Research Institute.</p>
+            </div>
         </div>
-    </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div>
-                <p>
-                    I am currently pursuing my M.Sc. in Mathematics at
-                    Harish-Chandra Research Institute.
-                </p>
+        <!-- Problems Section -->
+        <div class="section" id="problems">
+            <h2 class="section-title">Problems</h2>
+            <div class="section-content">
+                <p>I always like to solve basic questions related to <a href="group-theory.html">group theory</a>, metric space, and topology.</p>
             </div>
-        </section>
+        </div>
 
-        <section id="problems">
-            <h2>Problems</h2>
-            <div>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="group-theory.html">Problems in Group Theory</a>
-                        </h3>
-                        <p>
-                            These are problems I find interesting and that help me
-                            understand group theory better.
-                        </p>
-                    </li>
-                </ul>
+        <!-- Projects Section -->
+        <div class="section" id="projects">
+            <h2 class="section-title">Projects &<br>Internships</h2>
+            <div class="section-content">
+                <div class="project-block">
+                    <div class="project-title">Summer Internship Program &mdash; IISER Mohali (2026)</div>
+                    <div class="project-meta">Supervisor: Dr. Vaibhav Vaish</div>
+                    <p>Completed the first 3 chapters of <em>An Introduction to Homological Algebra</em> by Charles A. Weibel, covering chain complexes, derived functors, and Tor and Ext.</p>
+                </div>
+                
+                <div class="project-block">
+                    <div class="project-title">Bachelor's Thesis &mdash; Institute of Mathematics and Applications</div>
+                    <div class="project-meta">Supervisor: Dr. Jyoti Das Gupta</div>
+                    <p>Conducted a comprehensive review on the Quillen-Suslin Theorem.</p>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <section id="projects">
-            <h2>Projects &amp; Internships</h2>
-            <div>
-                <ul>
-                    <li>
-                        <strong>Summer Internship Program</strong> — IISER Mohali (2026)<br>
-                        <em>Supervisor:</em> Dr. Vaibhav Vaish<br>
-                        Completed the first three chapters of
-                        <em>An Introduction to Homological Algebra</em> by Charles A. Weibel,
-                        covering chain complexes, derived functors, Tor, and Ext.
-                    </li>
-                    <li>
-                        <strong>Bachelor's Thesis</strong> — Institute of Mathematics and Applications<br>
-                        <em>Supervisor:</em> Dr. Jyoti Das Gupta<br>
-                        Reviewed the Quillen–Suslin Theorem.
-                    </li>
-                </ul>
+        <!-- CV Section -->
+        <div class="section" id="cv">
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <div class="section-content">
+                <p>You can find my full academic history and achievements here:<br>
+                <a href="DiveshBhalotiya.cv.pdf" target="_blank">Download DiveshBhalotiya.cv.pdf</a></p>
             </div>
-        </section>
+        </div>
 
-        <section id="cv">
-            <h2>Curriculum Vitae</h2>
-            <div>
-                <p>
-                    <a href="DiveshBhalotiya.cv.pdf" target="_blank" rel="noopener">
-                        View or download my CV (PDF)
-                    </a>
-                </p>
-            </div>
-        </section>
-    </main>
+    </div>
+
 </body>
-    
 </html>
