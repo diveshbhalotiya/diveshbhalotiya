@@ -36,19 +36,30 @@
             border-top: 1px solid #ddd;
             margin-bottom: 50px;
         }
+        .area-section {
+            margin-bottom: 60px;
+        }
+        .area-title {
+            font-family: Palatino, "Palatino Linotype", Georgia, serif;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            color: #111;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
         .item-list {
             list-style-type: none;
             padding: 0;
         }
         .item-list li {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
         .item-title {
             font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 1.6em;
+            font-size: 1.5em;
             font-weight: bold;
             color: #111;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .item-desc {
             font-size: 1.1em;
@@ -78,23 +89,33 @@
         <a href="index.html" class="back-link">&larr; Back to Home</a>
         
         <h1>Interesting<br>Mathematical Things</h1>
-        
-          <div class="description">
-            I am documenting them here because you may find them useful for your own mathematical journey.
-        
-            
+        <div class="description">
+         I am documenting them here because you may find them useful for your own mathematical journey.
         </div>
         
         <div class="divider"></div>
 
-    <ul class="item-list">
-        <li>
-                <div class="item-title"><a href="homeomorphism-not-preserved.html">Completeness is Not Preserved Under Homeomorphism</a></div>
-                <div class="item-desc">A demonstration of when the discrete topology does not imply the discrete metric, providing a counterexample to show that completeness is a metric property, not a topological one.</div>
-            </li>
-            
-            <!-- Add more items by copying the <li> block above! -->
-        </ul>
+        <!-- Group Theory Section -->
+        <div class="area-section">
+            <h2 class="area-title">Group Theory</h2>
+            <ul class="item-list">
+                <li>
+                    <div class="item-title"><a href="unique-maximal-subgroup.html">Unique Maximal Subgroup</a></div>
+                    <div class="item-desc">A neat proof showing that if a finite group has a unique maximal subgroup, its order must be a prime power. Inspired by a problem in I. Martin Isaacs' <em>Algebra: A Graduate Course</em>.</div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Topology Section -->
+        <div class="area-section">
+            <h2 class="area-title">Topology & Metric Spaces</h2>
+            <ul class="item-list">
+                <li>
+                    <div class="item-title"><a href="homeomorphism-not-preserved.html">Completeness is Not Preserved Under Homeomorphism</a></div>
+                    <div class="item-desc">A demonstration of when the discrete topology does not imply the discrete metric, providing a counterexample to show that completeness is a metric property, not a topological one.</div>
+                </li>
+            </ul>
+        </div>
 
     </div>
 </body>
