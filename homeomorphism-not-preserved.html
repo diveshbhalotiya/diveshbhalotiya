@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Completeness is Not Preserved</title>
     
-    <!-- This script tells the browser to render LaTeX math formulas -->
     <script>
         MathJax = {
             tex: {
@@ -18,8 +17,8 @@
 
     <style>
         body {
-            background-color: #ffffff; /* Clean white background */
-            color: #374151; /* Dark charcoal text for readability */
+            background-color: #ffffff; 
+            color: #374151; 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -36,18 +35,18 @@
             font-weight: normal;
             line-height: 1.2;
             margin: 0 0 10px 0;
-            color: #111827; /* Near black for the main title */
+            color: #111827; 
         }
         .meta {
             font-size: 0.95em;
-            color: #6b7280; /* Subtle gray for metadata */
+            color: #6b7280; 
             margin-bottom: 40px;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
         }
         .divider {
-            border-top: 1px solid #e5e7eb; /* Soft gray divider */
+            border-top: 1px solid #e5e7eb; 
             margin-bottom: 40px;
         }
         .content {
@@ -63,19 +62,32 @@
             margin-bottom: 15px;
             color: #111827;
         }
+        .problem-box {
+            background-color: #f9fafb;
+            border-left: 4px solid #4f46e5;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
         .back-link {
             display: inline-block;
             margin-bottom: 40px;
             font-size: 0.9em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #4f46e5; /* Classic academic indigo */
+            color: #4f46e5; 
             text-decoration: none;
             font-weight: 600;
         }
         .back-link:hover {
-            color: #312e81; /* Darker indigo on hover */
+            color: #312e81; 
             text-decoration: underline;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -85,7 +97,7 @@
         <a href="interesting-math.html" class="back-link">&larr; Back to Interesting Math</a>
         
         <h1>When the Discrete Topology Does Not Imply the Discrete Metric</h1>
-        <div class="meta">30 Sep,2026 &bull; Metric Space</div>
+        <div class="meta">30 Jun 2025 &bull; Topology &bull; Metric Spaces</div>
         
         <div class="divider"></div>
 
@@ -94,19 +106,19 @@
             
             $$ \mathcal{T}_{X} = \{A \mid A \subseteq X\} $$
             
-            <p>Now, is the converse true?</p>
-            
             <p>Recall that the discrete metric function $e$ on $X \times X$ is defined as:</p>
             
             $$ e(x,y) = \begin{cases} 0 & \text{if } x = y, \\ 1 & \text{if } x \neq y. \end{cases} $$
             
             <p>So, we can say that every Cauchy sequence in $(X,e)$ is convergent in $X$.</p>
             
-            <p>Suppose we have a metric $d$ on $X$ such that the topology induced by $d$ is $\mathcal{T}_{X} = \{A \mid A \subseteq X\}$. Does this imply that $d$ is the discrete metric? No.</p>
+            <div class="problem-box">
+                <strong>Question:</strong> Suppose we have a metric $d$ on $X$ such that the topology induced by $d$ is the discrete topology $\mathcal{T}_{X} = \{A \mid A \subseteq X\}$. Does this imply that $d$ is the discrete metric?
+            </div>
             
-            <h2>Counterexample</h2>
+            <h2>The Counterexample</h2>
             
-            <p>Define a metric $d : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{R}$:</p>
+            <p>No, it does not. We can define a metric $d : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{R}$ as follows:</p>
             
             $$ d(m,n) = \left| \frac{1}{n} - \frac{1}{m} \right| $$
             
@@ -119,7 +131,8 @@
             
             <p>This counterexample shows that even if the topology induced by a metric is the discrete topology, the metric itself need not be the discrete metric.</p>
             
-            <p>Moreover, if you are familiar with the concept of equivalent metrics, observe that $(\mathbb{N}, d)$ is homeomorphic to the metric space $(\mathbb{N}, |\cdot|)$. Hence, this example illustrates that completeness is not preserved under homeomorphism.</p>
+            <h2>Conclusion</h2>
+            <p>Moreover, if you are familiar with the concept of equivalent metrics, observe that $(\mathbb{N}, d)$ is homeomorphic to the metric space $(\mathbb{N}, |\cdot|)$. Hence, this example perfectly illustrates that <strong>completeness is not preserved under homeomorphism</strong>.</p>
         </div>
 
     </div>
