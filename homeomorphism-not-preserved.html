@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completeness is Not Preserved</title>
+    
+    <!-- This script tells the browser to render LaTeX math formulas -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            background-color: #fafafa;
+            color: #222;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        h1 {
+            font-family: Palatino, "Palatino Linotype", Georgia, serif;
+            font-size: 2.5em;
+            font-weight: normal;
+            line-height: 1.2;
+            margin: 0 0 10px 0;
+            color: #111;
+        }
+        .meta {
+            font-size: 0.95em;
+            color: #666;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .divider {
+            border-top: 1px solid #ddd;
+            margin-bottom: 40px;
+        }
+        .content {
+            font-size: 1.1em;
+            color: #333;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .content h2 {
+            font-family: Palatino, "Palatino Linotype", Georgia, serif;
+            font-size: 1.5em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #111;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <a href="interesting-math.html" class="back-link">&larr; Back to Interesting Math</a>
+        
+        <h1>When the Discrete Topology Does Not Imply the Discrete Metric</h1>
+        <div class="meta">functorcat &bull; 30 Jun 2025 &bull; Metric Space</div>
+        
+        <div class="divider"></div>
+
+        <div class="content">
+            <p>You may be familiar with the discrete metric on an arbitrary set $X$. The discrete metric makes every subset of $X$ an open set. If we let $\mathcal{T}_{X}$ denote the topology induced by the discrete metric on $X$, then</p>
+            
+            $$ \mathcal{T}_{X} = \{A \mid A \subseteq X\} $$
+            
+            <p>Now, is the converse true?</p>
+            
+            <p>Recall that the discrete metric function $e$ on $X \times X$ is defined as:</p>
+            
+            $$ e(x,y) = \begin{cases} 0 & \text{if } x = y, \\ 1 & \text{if } x \neq y. \end{cases} $$
+            
+            <p>So, we can say that every Cauchy sequence in $(X,e)$ is convergent in $X$.</p>
+            
+            <p>Suppose we have a metric $d$ on $X$ such that the topology induced by $d$ is $\mathcal{T}_{X} = \{A \mid A \subseteq X\}$. Does this imply that $d$ is the discrete metric? No.</p>
+            
+            <h2>Counterexample</h2>
+            
+            <p>Define a metric $d : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{R}$:</p>
+            
+            $$ d(m,n) = \left| \frac{1}{n} - \frac{1}{m} \right| $$
+            
+            <p>where $|\cdot|$ denotes the usual Euclidean metric on $\mathbb{R}$.</p>
+            
+            <ul>
+                <li>Every subset of $\mathbb{N}$ is open in this metric space. Thus, $\mathcal{T}_{\mathbb{N}} = \{A \mid A \subseteq \mathbb{N}\}$.</li>
+                <li>However, this space is not complete. Consider the sequence $x_{n} = n$. It is Cauchy but not convergent in $(\mathbb{N},d)$.</li>
+            </ul>
+            
+            <p>This counterexample shows that even if the topology induced by a metric is the discrete topology, the metric itself need not be the discrete metric.</p>
+            
+            <p>Moreover, if you are familiar with the concept of equivalent metrics, observe that $(\mathbb{N}, d)$ is homeomorphic to the metric space $(\mathbb{N}, |\cdot|)$. Hence, this example illustrates that completeness is not preserved under homeomorphism.</p>
+        </div>
+
+    </div>
+</body>
+</html>
