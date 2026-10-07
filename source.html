@@ -6,272 +6,200 @@
     <title>Mathematical Sources</title>
     <style>
         body {
-            background-color: #ffffff;
-            color: #232629; /* Stack Exchange dark gray */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
+            /* Aged parchment / stone background */
+            background: radial-gradient(circle, #eaddc5 0%, #c4a98b 100%);
+            color: #3e2723;
+            /* Classical serif fonts */
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
-            padding: 0;
-            line-height: 1.4;
+            padding: 60px 20px;
         }
-        /* A subtle top bar to mimic the Stack Exchange network bar */
-        .top-bar {
-            background-color: #f48024; /* Stack orange accent */
-            height: 3px;
-            width: 100%;
-        }
-        .container {
-            max-width: 900px;
+        .scroll-container {
+            max-width: 800px;
             margin: 0 auto;
-            padding: 24px;
-            border-left: 1px solid #d6d9dc;
-            border-right: 1px solid #d6d9dc;
-            min-height: 100vh;
+            padding: 50px 70px;
+            background-color: #f5eedc;
+            border-left: 2px solid #8b5a2b;
+            border-right: 2px solid #8b5a2b;
+            box-shadow: 
+                inset 0 0 60px rgba(139, 90, 43, 0.15), 
+                10px 15px 25px rgba(0,0,0,0.4);
+            position: relative;
         }
-        .header-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
+        /* Top and Bottom Scroll Rollers */
+        .scroll-container::before, .scroll-container::after {
+            content: '';
+            position: absolute;
+            left: -15px;
+            right: -15px;
+            height: 25px;
+            background: linear-gradient(to bottom, #5c3a21, #8b5a2b, #5c3a21);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+            border: 1px solid #3e2723;
         }
-        h1 {
-            font-size: 2.1em;
-            font-weight: 400;
-            margin: 0;
-            color: #232629;
-        }
+        .scroll-container::before { top: -12px; }
+        .scroll-container::after { bottom: -12px; }
+
         .back-link {
-            background-color: #0a95ff;
-            color: #ffffff;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
-            padding: 10px 15px;
-            font-size: 13px;
-            text-decoration: none;
             display: inline-block;
+            margin-bottom: 25px;
+            color: #8b5a2b;
+            text-decoration: none;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s;
         }
         .back-link:hover {
-            background-color: #0074cc;
-            text-decoration: none;
+            color: #4a2e15;
+            border-bottom: 1px solid #4a2e15;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3.2em;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #4a2e15;
+            border-bottom: 2px double #8b5a2b;
+            padding-bottom: 15px;
+            margin: 0 0 20px 0;
+            font-weight: normal;
         }
         .description {
-            font-size: 15px;
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #d6d9dc;
+            text-align: center;
+            font-size: 1.2em;
+            font-style: italic;
+            margin-bottom: 45px;
+            color: #5c3a21;
+            line-height: 1.6;
         }
-        .area-section {
-            margin-bottom: 30px;
+        .category-title {
+            font-size: 2.2em;
+            color: #4a2e15;
+            border-bottom: 1px solid #8b5a2b;
+            padding-bottom: 5px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-variant: small-caps;
+            font-weight: normal;
         }
-        /* Style the category titles like Math SE tags */
-        .tag {
-            display: inline-block;
-            padding: 4.8px 6px;
-            margin-bottom: 12px;
-            background-color: #e1ecf4;
-            color: #39739d;
-            border: 1px solid transparent;
-            border-radius: 3px;
-            font-size: 13px;
-            text-transform: lowercase;
-        }
-        .item-list {
-            list-style-type: none;
+        .book-list {
+            list-style: none;
             padding: 0;
-            margin: 0;
-            border-top: 1px solid #e4e6e8;
         }
-        .item-list li {
-            padding: 16px 0;
-            border-bottom: 1px solid #e4e6e8;
-            display: flex;
-            flex-direction: column;
+        .book-list li {
+            margin-bottom: 35px;
+            position: relative;
+            padding-left: 35px;
+        }
+        .book-list li::before {
+            content: '❖'; /* Ancient diamond symbol */
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #8b5a2b;
+            font-size: 1.4em;
         }
         .book-title {
-            font-size: 1.15em;
-            font-weight: 400;
-            margin: 0 0 6px 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4a2e15;
+            margin-bottom: 2px;
         }
-        .book-title a {
-            color: #0074cc;
-            text-decoration: none;
-        }
-        .book-title a:hover {
-            color: #0a95ff;
-            text-decoration: underline;
+        .book-author {
+            font-size: 1.1em;
+            font-style: italic;
+            color: #8b5a2b;
+            margin-bottom: 12px;
         }
         .book-review {
-            font-size: 14px;
-            color: #3b4045;
-            margin-bottom: 8px;
-            max-width: 800px;
-        }
-        /* Replicate the Stack Exchange user info box for authors */
-        .user-card-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 4px;
-        }
-        .user-card {
-            background-color: #f8f9f9;
-            padding: 5px 7px;
-            width: 150px;
-            border-radius: 3px;
-        }
-        .user-action-time {
-            font-size: 12px;
-            color: #6a737c;
-            margin-bottom: 4px;
-        }
-        .user-details {
-            font-size: 12px;
-            color: #0074cc;
+            font-size: 1.15em;
+            line-height: 1.7;
+            color: #3e2723;
         }
     </style>
 </head>
 <body>
-    <div class="top-bar"></div>
-    <div class="container">
+    <div class="scroll-container">
         
-        <div class="header-wrapper">
-            <h1>Sources</h1>
-            <a href="index.html" class="back-link">Return to Home</a>
-        </div>
+        <a href="index.html" class="back-link">&larr; Return to Library</a>
         
+        <h1>Mathematical Sources</h1>
         <div class="description">
-            A curated bibliography of the textbooks, lecture notes, and references that have shaped my understanding of mathematics.
+            A curated bibliography of the texts, archaic notes, and references that have shaped my understanding of the mathematical arts.
         </div>
 
         <!-- Abstract Algebra Section -->
-        <div class="area-section">
-            <span class="tag">abstract-algebra</span>
-            <ul class="item-list">
-                <li>
-                    <h3 class="book-title"><a href="#">Algebra</a></h3>
-                    <div class="book-review">This one has a great quality of exercises, and I personally like the way he introduces quotient rings. It is an excellent book for abstract algebra.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">Michael Artin</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">Abstract Algebra</a></h3>
-                    <div class="book-review">I would say this has more exercises compared to other books, and for the exercises, the quality is on par with Artin. However, it introduces you to many more topics that are not covered in Artin.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">David S. Dummit and Richard M. Foote</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">A First Course in Abstract Algebra</a></h3>
-                    <div class="book-review">Some of the problems in this book gave me valuable tools to tackle other mathematical problems.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">John B. Fraleigh</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">Algebra: Chapter 0</a></h3>
-                    <div class="book-review">I don’t suggest this for beginners or those who do not know category theory. But I can say if anyone knows a little bit of category theory, it is a very good choice for a secondary course.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">Paolo Aluffi</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">Algebra: A Graduate Course</a></h3>
-                    <div class="book-review">I am currently working through this and I can say it is one of the books I should have done earlier in my undergraduate studies. It has a great quality of problems.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">I. Martin Isaacs</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <h2 class="category-title">Abstract Algebra</h2>
+        <ul class="book-list">
+            <li>
+                <div class="book-title">Algebra</div>
+                <div class="book-author">by Michael Artin</div>
+                <div class="book-review">This one has a great quality of exercises, and I personally like the way he introduces quotient rings. It is an excellent book for abstract algebra.</div>
+            </li>
+            <li>
+                <div class="book-title">Abstract Algebra</div>
+                <div class="book-author">by David S. Dummit and Richard M. Foote</div>
+                <div class="book-review">I would say this has more exercises compared to other books, and for the exercises, the quality is on par with Artin. However, it introduces you to many more topics that are not covered in Artin.</div>
+            </li>
+            <li>
+                <div class="book-title">A First Course in Abstract Algebra</div>
+                <div class="book-author">by John B. Fraleigh</div>
+                <div class="book-review">Some of the problems in this book gave me valuable tools to tackle other mathematical problems.</div>
+            </li>
+            <li>
+                <div class="book-title">Algebra: Chapter 0</div>
+                <div class="book-author">by Paolo Aluffi</div>
+                <div class="book-review">I don’t suggest this for beginners or those who do not know category theory. But I can say if anyone knows a little bit of category theory, it is a very good choice for a secondary course.</div>
+            </li>
+            <li>
+                <div class="book-title">Algebra: A Graduate Course</div>
+                <div class="book-author">by I. Martin Isaacs</div>
+                <div class="book-review">I am currently working through this and I can say it is one of the books I should have done earlier in my undergraduate studies. It has a great quality of problems.</div>
+            </li>
+        </ul>
 
         <!-- Metric Spaces Section -->
-        <div class="area-section">
-            <span class="tag">metric-spaces</span>
-            <ul class="item-list">
-                <li>
-                    <h3 class="book-title"><a href="#">Real Analysis</a></h3>
-                    <div class="book-review">An excellent book that is highly rich in exercises. I personally learned a tremendous amount about metric spaces from this text.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">N.L. Carothers</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">Principles of Mathematical Analysis</a></h3>
-                    <div class="book-review">Of course. A definitive classic.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">Walter Rudin</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">Set Theory and Metric Spaces</a></h3>
-                    <div class="book-review">I am currently going through this, and it is an excellent book. If you truly want to understand metric spaces from the ground up, I highly recommend going through it.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">Irving Kaplansky</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <h2 class="category-title">Metric Spaces</h2>
+        <ul class="book-list">
+            <li>
+                <div class="book-title">Real Analysis</div>
+                <div class="book-author">by N.L. Carothers</div>
+                <div class="book-review">An excellent book that is highly rich in exercises. I personally learned a tremendous amount about metric spaces from this text.</div>
+            </li>
+            <li>
+                <div class="book-title">Principles of Mathematical Analysis</div>
+                <div class="book-author">by Walter Rudin</div>
+                <div class="book-review">Of course. A definitive classic.</div>
+            </li>
+            <li>
+                <div class="book-title">Set Theory and Metric Spaces</div>
+                <div class="book-author">by Irving Kaplansky</div>
+                <div class="book-review">I am currently going through this, and it is an excellent book. If you truly want to understand metric spaces from the ground up, I highly recommend going through it.</div>
+            </li>
+        </ul>
 
         <!-- General Point Set Topology Section -->
-        <div class="area-section">
-            <span class="tag">general-topology</span>
-            <ul class="item-list">
-                <li>
-                    <h3 class="book-title"><a href="#">Topology</a></h3>
-                    <div class="book-review">The standard textbook for the subject. If you really want to do rigorous mathematics, you must go through it. When I first saw the definition of a topology, I didn't understand what we were doing—which I think is very natural for beginners. Consistency and persistence are key here.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">James R. Munkres</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">Topology Without Tears</a></h3>
-                    <div class="book-review">A great resource for beginners, but its main drawback is that it can become a way to escape the rigorous mathematics found in Munkres. I personally used this for my undergraduate course, but later realized that Munkres is ultimately the standard I needed to master.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">Sidney A. Morris</div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <h3 class="book-title"><a href="#">General Topology</a></h3>
-                    <div class="book-review">I am trying to go through this whenever I have time. It is quite terse, but it provides a massive amount of results that you can easily generalize further.</div>
-                    <div class="user-card-wrapper">
-                        <div class="user-card">
-                            <div class="user-action-time">author</div>
-                            <div class="user-details">Ryszard Engelking</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <h2 class="category-title">General Point Set Topology</h2>
+        <ul class="book-list">
+            <li>
+                <div class="book-title">Topology</div>
+                <div class="book-author">by James R. Munkres</div>
+                <div class="book-review">The standard textbook for the subject. If you really want to do rigorous mathematics, you must go through it. When I first saw the definition of a topology, I didn't understand what we were doing—which I think is very natural for beginners. Consistency and persistence are key here.</div>
+            </li>
+            <li>
+                <div class="book-title">Topology Without Tears</div>
+                <div class="book-author">by Sidney A. Morris</div>
+                <div class="book-review">A great resource for beginners, but its main drawback is that it can become a way to escape the rigorous mathematics found in Munkres. I personally used this for my undergraduate course, but later realized that Munkres is ultimately the standard I needed to master.</div>
+            </li>
+            <li>
+                <div class="book-title">General Topology</div>
+                <div class="book-author">by Ryszard Engelking</div>
+                <div class="book-review">I am trying to go through this whenever I have time. It is quite terse, but it provides a massive amount of results that you can easily generalize further.</div>
+            </li>
+        </ul>
 
     </div>
 </body>
