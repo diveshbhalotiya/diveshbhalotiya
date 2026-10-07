@@ -6,115 +6,156 @@
     <title>About Me - Divesh Bhalotiya</title>
     <style>
         body {
-            /* Gamma Radiation Green */
-            background-color: #2e7d32; 
-            background-image: repeating-linear-gradient(45deg, #1b5e20 25%, transparent 25%, transparent 75%, #1b5e20 75%, #1b5e20), repeating-linear-gradient(45deg, #1b5e20 25%, #2e7d32 25%, #2e7d32 75%, #1b5e20 75%, #1b5e20);
-            background-position: 0 0, 20px 20px;
-            background-size: 40px 40px;
-            color: #ffffff; 
-            /* Heavy, strong fonts */
-            font-family: 'Impact', 'Arial Black', sans-serif; 
+            /* "Texture like sun" - Warm, golden parchment background */
+            background-color: #f4ebd8;
+            background-image: radial-gradient(circle at top right, #fdf8e1, transparent 40%), 
+                              radial-gradient(circle at bottom left, #e8d5b5, transparent 40%);
+            color: #3e2723; /* Deep espresso brown */
+            font-family: 'Palatino Linotype', Palatino, Georgia, serif;
             margin: 0;
             padding: 60px 20px;
+            line-height: 1.6;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 50px;
-            /* Ripped Purple Pants */
-            background-color: #4a148c; 
-            border-radius: 10px; /* Sharper, blockier corners */
-            border: 8px solid #76ff03; /* Neon green glowing border */
-            box-shadow: 15px 15px 0px #1b5e20; /* Heavy dark green drop shadow */
-            text-align: left;
+            padding: 50px 60px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            border: 2px solid #b87333; /* Copper/Golden-brown */
+            box-shadow: 8px 8px 0px #8b5a2b; /* Solid vintage brown drop shadow */
         }
         h1 {
-            font-size: 4.5em;
-            font-weight: 900;
-            line-height: 1;
-            margin: 0 0 20px 0;
-            color: #76ff03; /* Neon green */
+            font-size: 3em;
+            font-weight: normal;
+            margin: 0 0 10px 0;
+            color: #5c4033; /* Darker golden brown */
             text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 4px 4px 0px #1b5e20;
+            letter-spacing: 4px;
+            border-bottom: 2px solid #d4af37; /* Metallic gold underline */
+            padding-bottom: 15px;
         }
-        .bio-text {
-            font-family: 'Arial', sans-serif; /* Readable font for paragraphs */
-            font-size: 1.3em;
-            color: #eeeeee;
-            line-height: 1.6;
+        .intro-text {
+            font-size: 1.25em;
+            color: #4e342e;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+        .intro-text p {
+            margin-bottom: 15px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #fcf8f2;
+            border-left: 4px solid #d4af37; /* Gold accent line */
+            box-shadow: 3px 3px 6px rgba(139, 90, 43, 0.1);
+        }
+        .section-title {
+            font-size: 1.6em;
+            color: #5c4033;
+            margin: 0 0 10px 0;
             font-weight: bold;
-            margin-bottom: 25px;
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-left: 6px solid #76ff03;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
-        .bio-text p {
-            margin-top: 0;
+        .section-meta {
+            font-size: 1em;
+            font-style: italic;
+            color: #8b5a2b;
+            margin-bottom: 15px;
+        }
+        .section-content {
+            font-size: 1.15em;
+            color: #3e2723;
         }
         .divider {
-            border-top: 8px solid #76ff03; 
+            text-align: center;
             margin: 40px 0;
+            color: #d4af37;
+            font-size: 1.5em;
+            letter-spacing: 15px;
         }
         .cv-link-container {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
         }
         .cv-link {
             display: inline-block;
-            font-size: 2em;
-            font-weight: 900;
+            font-size: 1.2em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-weight: bold;
             text-transform: uppercase;
-            color: #4a148c;
-            background-color: #76ff03;
+            letter-spacing: 2px;
+            color: #ffffff;
+            background-color: #8b5a2b;
             text-decoration: none;
-            padding: 20px 40px;
-            border: 6px solid #1b5e20;
-            transition: all 0.1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            padding: 15px 35px;
+            border-radius: 2px;
+            border: 1px solid #5c4033;
+            transition: all 0.3s ease;
         }
         .cv-link:hover {
-            transform: scale(1.1) rotate(-2deg); /* A heavy, aggressive smash hover effect */
-            background-color: #ffffff;
-            color: #1b5e20;
-            border-color: #76ff03;
-            box-shadow: 10px 10px 0px #1b5e20;
+            background-color: #d4af37;
+            color: #3e2723;
+            border-color: #b87333;
+            box-shadow: 4px 4px 0px #5c4033;
         }
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            font-size: 1.2em;
+            font-size: 0.9em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #76ff03;
+            letter-spacing: 1px;
+            color: #b87333;
             text-decoration: none;
-            font-family: 'Arial Black', sans-serif;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
         }
         .back-link:hover {
-            color: #ffffff;
-            text-decoration: underline;
+            color: #5c4033;
+            border-bottom: 1px solid #5c4033;
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <a href="index.html" class="back-link">&larr; BACK TO BASE</a>
+        <a href="index.html" class="back-link">&larr; Return to Home</a>
 
         <h1>Divesh Bhalotiya</h1>
         
-        <div class="bio-text">
-            <p>I am a mathematician currently pursuing my Master's degree in Mathematics at the Harish-Chandra Research Institute (HRI) in Prayagraj. My academic journey previously took me through the Institute of Mathematics and Applications (IMA) in Bhubaneswar, where I completed my undergraduate studies, as well as a summer research stint at IISER Mohali.</p>
+        <div class="intro-text">
+            <p>I am a mathematician currently pursuing my Master's degree in Mathematics at the Harish-Chandra Research Institute (HRI) in Prayagraj. Prior to this, I completed my undergraduate studies at the Institute of Mathematics and Applications (IMA) in Bhubaneswar.</p>
             
-            <p>My core focus lies in advanced structural mathematics. I spend the majority of my time exploring Real Analysis, Abstract Algebra, homological algebra, commutative ring theory, and Galois groups.</p>
-            
-            <p>Beyond theorems and proofs, I am a competitive chess player and an avid anime fan.</p>
+            <p>My primary interests lie in advanced structural mathematics. I am deeply focused on Real Analysis, Abstract Algebra, Homological Algebra, Commutative Ring Theory, and Galois Groups.</p>
         </div>
 
-        <div class="divider"></div>
+        <div class="divider">&#10022; &#10022; &#10022;</div>
+
+        <!-- Bachelor Thesis Section -->
+        <div class="section">
+            <h2 class="section-title">Bachelor Thesis</h2>
+            <div class="section-meta">Institute of Mathematics and Applications (IMA)</div>
+            <div class="section-content">
+                <!-- Just replace the bracketed text below with your actual thesis topic! -->
+                My undergraduate thesis focused on [Insert your thesis title or primary research topic here]. During this project, I explored [briefly mention 1 or 2 key concepts, theorems, or problems you tackled], which further solidified my interest in rigorous mathematical structures.
+            </div>
+        </div>
+
+        <!-- Summer Program Section -->
+        <div class="section">
+            <h2 class="section-title">Summer Research Program</h2>
+            <div class="section-meta">Department of Mathematical Sciences, IISER Mohali &bull; May – July 2026</div>
+            <div class="section-content">
+                I participated in a summer research program at the Indian Institute of Science Education and Research (IISER) Mohali. This provided an invaluable environment to engage with advanced mathematical problems, utilize campus academic resources, and refine my approach to structured mathematical proofs.
+            </div>
+        </div>
 
         <div class="cv-link-container">
-            <a href="DiveshBhalotiyacv.pdf" class="cv-link">VIEW MY CV</a>
+            <a href="cv.html" class="cv-link">View My CV Directory</a>
         </div>
 
     </div>
