@@ -6,82 +6,108 @@
     <title>Mathematical Sources</title>
     <style>
         body {
-            background-color: #fdfbf7; /* Warm cream/parchment background */
-            color: #292524; /* Dark stone text */
-            font-family: Palatino, "Palatino Linotype", Georgia, serif; 
+            /* Tom's signature slate blue-gray fur color with a subtle cartoon dot pattern */
+            background-color: #8da3b8; 
+            background-image: radial-gradient(#a3b8cc 15%, transparent 15%), radial-gradient(#a3b8cc 15%, transparent 15%);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #2c3e50; 
+            /* Playful cartoon fonts */
+            font-family: 'Comic Sans MS', "Chalkboard SE", "Comic Neue", sans-serif; 
             margin: 0;
-            padding: 0;
+            padding: 60px 20px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 100px 40px;
+            padding: 60px;
+            background-color: #ffffff; /* Tom's white muzzle and tummy */
+            border-radius: 30px;
+            border: 6px solid #2c3e50; /* Thick cartoon outline */
+            box-shadow: 12px 12px 0px #e74c3c; /* Bright red drop shadow */
         }
         h1 {
-            font-size: 4.5em;
-            font-weight: normal;
+            font-size: 3.5em;
+            font-weight: 900;
             line-height: 1.1;
-            margin: 0 0 20px 0;
-            color: #451a03; /* Deep espresso/brown */
-            letter-spacing: -1px;
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .description {
-            font-size: 1.2em;
-            color: #57534e;
+            font-size: 1.25em;
+            color: #576574;
+            margin-bottom: 40px;
+            font-weight: bold;
             line-height: 1.6;
-            margin-bottom: 50px;
-            font-style: italic;
         }
         .divider {
-            border-top: 1px solid #d6d3d1;
+            border-top: 5px dashed #f1c40f; /* Yellow dashed line */
+            margin-bottom: 40px;
+        }
+        .area-section {
             margin-bottom: 50px;
         }
-        .source-category {
-            margin-bottom: 60px;
-        }
-        .category-title {
-            font-size: 1.8em;
+        .area-title {
+            font-size: 2.2em;
+            font-weight: 900;
             margin-bottom: 25px;
-            color: #451a03;
-            border-bottom: 1px dashed #d6d3d1;
-            padding-bottom: 10px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #f1c40f;
         }
-        .source-list {
-            list-style-type: none; 
-            padding-left: 0;
-            font-size: 1.15em;
-            line-height: 1.6;
+        .item-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .source-list li {
+        .item-list li {
             margin-bottom: 30px;
+            padding: 25px;
+            background-color: #f8f9fa; /* Light gray box for each book */
+            border-radius: 20px;
+            border: 4px solid #2c3e50;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .item-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 0px #f1c40f; /* Playful yellow bounce effect on hover */
         }
         .book-title {
-            font-weight: bold;
-            color: #451a03;
-            font-size: 1.05em;
+            font-size: 1.6em;
+            font-weight: 900;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            color: #e74c3c;
         }
         .book-author {
-            color: #57534e;
+            font-size: 1.1em;
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
         .book-review {
-            margin-top: 8px;
-            color: #292524;
-        }
-        a {
-            color: #9a3412; 
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            font-size: 1.15em;
+            line-height: 1.6;
+            color: #2c3e50;
         }
         .back-link {
             display: inline-block;
-            margin-bottom: 40px;
-            font-size: 0.9em;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #451a03;
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #c0392b;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #f1c40f;
         }
     </style>
 </head>
@@ -98,9 +124,9 @@
         <div class="divider"></div>
 
         <!-- Abstract Algebra Section -->
-        <div class="source-category">
-            <h2 class="category-title">Abstract Algebra</h2>
-            <ul class="source-list">
+        <div class="area-section">
+            <h2 class="area-title">Abstract Algebra</h2>
+            <ul class="item-list">
                 <li>
                     <div class="book-title">Algebra</div>
                     <div class="book-author">by Michael Artin</div>
@@ -130,9 +156,9 @@
         </div>
 
         <!-- Metric Spaces Section -->
-        <div class="source-category">
-            <h2 class="category-title">Metric Spaces</h2>
-            <ul class="source-list">
+        <div class="area-section">
+            <h2 class="area-title">Metric Spaces</h2>
+            <ul class="item-list">
                 <li>
                     <div class="book-title">Real Analysis</div>
                     <div class="book-author">by N.L. Carothers</div>
@@ -152,9 +178,9 @@
         </div>
 
         <!-- General Point Set Topology Section -->
-        <div class="source-category">
-            <h2 class="category-title">General Point Set Topology</h2>
-            <ul class="source-list">
+        <div class="area-section">
+            <h2 class="area-title">General Point Set Topology</h2>
+            <ul class="item-list">
                 <li>
                     <div class="book-title">Topology</div>
                     <div class="book-author">by James R. Munkres</div>
@@ -170,7 +196,6 @@
                     <div class="book-author">by Ryszard Engelking</div>
                     <div class="book-review">I am trying to go through this whenever I have time. It is quite terse, but it provides a massive amount of results that you can easily generalize further.</div>
                 </li>
-                
             </ul>
         </div>
 
