@@ -18,9 +18,9 @@
 
     <style>
         body {
-            /* Tom's signature slate blue-gray fur color with a subtle cartoon dot pattern */
-            background-color: #8da3b8; 
-            background-image: radial-gradient(#a3b8cc 15%, transparent 15%), radial-gradient(#a3b8cc 15%, transparent 15%);
+            /* Oggy's bright blue fur with a subtle cartoon dot pattern */
+            background-color: #45b6fe; 
+            background-image: radial-gradient(#2fa1e6 15%, transparent 15%), radial-gradient(#2fa1e6 15%, transparent 15%);
             background-size: 40px 40px;
             background-position: 0 0, 20px 20px;
             color: #2c3e50; 
@@ -33,29 +33,30 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 60px;
-            background-color: #ffffff; /* Tom's white muzzle and tummy */
+            background-color: #ffffff; 
             border-radius: 30px;
-            border: 6px solid #2c3e50; /* Thick cartoon outline */
-            box-shadow: 12px 12px 0px #e74c3c; /* Bright red drop shadow */
+            border: 6px solid #8e44ad; /* Cartoon purple outline like their house */
+            box-shadow: 12px 12px 0px #fd79a8; /* Joey's bright pink drop shadow */
         }
         h1 {
             font-size: 3.5em;
             font-weight: 900;
             line-height: 1.1;
             margin: 0 0 15px 0;
-            color: #2c3e50;
+            color: #8e44ad; /* Purple */
             text-transform: uppercase;
             letter-spacing: 2px;
+            text-shadow: 2px 2px 0px #2ecc71; /* Oggy's green eye color pop */
         }
         .description {
             font-size: 1.25em;
-            color: #576574;
+            color: #2c3e50;
             margin-bottom: 40px;
             font-weight: bold;
             line-height: 1.6;
         }
         .divider {
-            border-top: 5px dashed #f1c40f; /* Yellow dashed line */
+            border-top: 5px dashed #f39c12; /* Dee Dee's orange dashed line */
             margin-bottom: 40px;
         }
         .area-section {
@@ -65,11 +66,11 @@
             font-size: 2.2em;
             font-weight: 900;
             margin-bottom: 25px;
-            color: #2c3e50;
+            color: #8e44ad;
             text-transform: uppercase;
             text-decoration: underline;
             text-decoration-style: dashed;
-            text-decoration-color: #f1c40f;
+            text-decoration-color: #fd79a8;
         }
         .item-list {
             list-style-type: none;
@@ -78,14 +79,14 @@
         .item-list li {
             margin-bottom: 30px;
             padding: 25px;
-            background-color: #f8f9fa; /* Light gray box for each directory item */
+            background-color: #fdfdfd; 
             border-radius: 20px;
-            border: 4px solid #2c3e50;
+            border: 4px solid #8e44ad;
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .item-list li:hover {
             transform: translateY(-5px);
-            box-shadow: 6px 6px 0px #f1c40f; /* Playful yellow bounce effect on hover */
+            box-shadow: 6px 6px 0px #f39c12; /* Dee Dee's orange bounce effect on hover */
         }
         .item-title {
             font-size: 1.6em;
@@ -94,14 +95,14 @@
             text-transform: uppercase;
         }
         .item-title a {
-            color: #e74c3c;
+            color: #e67e22; /* Darker orange */
             text-decoration: none;
         }
         .item-title a:hover {
-            color: #c0392b;
+            color: #8e44ad;
             text-decoration: underline;
             text-decoration-style: dashed;
-            text-decoration-color: #f1c40f;
+            text-decoration-color: #2ecc71;
         }
         .item-desc {
             font-size: 1.15em;
@@ -115,14 +116,18 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #e74c3c;
+            color: #ffffff;
+            background-color: #fd79a8; /* Pink button */
             text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 12px;
+            border: 3px solid #8e44ad;
+            transition: all 0.2s ease;
         }
         .back-link:hover {
-            color: #c0392b;
-            text-decoration: underline;
-            text-decoration-style: dashed;
-            text-decoration-color: #f1c40f;
+            background-color: #8e44ad;
+            color: #ffffff;
+            box-shadow: 4px 4px 0px #2ecc71;
         }
     </style>
 </head>
