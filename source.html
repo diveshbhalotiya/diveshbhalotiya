@@ -6,201 +6,269 @@
     <title>Mathematical Sources</title>
     <style>
         body {
-            /* Deep Blue (like his boots/undershirt) with Kamehameha Cyan energy sparks */
-            background-color: #0c2461; 
-            background-image: radial-gradient(#48dbfb 15%, transparent 15%), radial-gradient(#48dbfb 15%, transparent 15%);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
-            color: #2c3e50; 
-            /* Playful cartoon fonts */
-            font-family: 'Comic Sans MS', "Chalkboard SE", "Comic Neue", sans-serif; 
+            background-color: #ffffff;
+            color: #232629; /* Stack Exchange dark gray */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Adjusted", "Segoe UI", "Liberation Sans", sans-serif;
             margin: 0;
-            padding: 60px 20px;
+            padding: 0;
+            line-height: 1.4;
+        }
+        /* A subtle top bar to mimic the Stack Exchange network bar */
+        .top-bar {
+            background-color: #f48024; /* Stack orange accent */
+            height: 3px;
+            width: 100%;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 60px;
-            background-color: #ffffff; 
-            border-radius: 30px;
-            border: 6px solid #feca57; /* Super Saiyan Gold outline */
-            box-shadow: 12px 12px 0px #48dbfb; /* Kamehameha Cyan drop shadow */
+            padding: 24px;
+            border-left: 1px solid #d6d9dc;
+            border-right: 1px solid #d6d9dc;
+            min-height: 100vh;
+        }
+        .header-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
         }
         h1 {
-            font-size: 3.5em;
-            font-weight: 900;
-            line-height: 1.1;
-            margin: 0 0 15px 0;
-            color: #0c2461; /* Deep blue */
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 0px #feca57; /* Super Saiyan Gold text pop */
+            font-size: 2.1em;
+            font-weight: 400;
+            margin: 0;
+            color: #232629;
+        }
+        .back-link {
+            background-color: #0a95ff;
+            color: #ffffff;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);
+            padding: 10px 15px;
+            font-size: 13px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .back-link:hover {
+            background-color: #0074cc;
+            text-decoration: none;
         }
         .description {
-            font-size: 1.25em;
-            color: #2c3e50;
-            margin-bottom: 40px;
-            font-weight: bold;
-            line-height: 1.6;
-        }
-        .divider {
-            border-top: 5px dashed #48dbfb; /* Cyan dashed line */
-            margin-bottom: 40px;
+            font-size: 15px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #d6d9dc;
         }
         .area-section {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
         }
-        .area-title {
-            font-size: 2.2em;
-            font-weight: 900;
-            margin-bottom: 25px;
-            color: #0c2461;
-            text-transform: uppercase;
-            text-decoration: underline;
-            text-decoration-style: dashed;
-            text-decoration-color: #feca57;
+        /* Style the category titles like Math SE tags */
+        .tag {
+            display: inline-block;
+            padding: 4.8px 6px;
+            margin-bottom: 12px;
+            background-color: #e1ecf4;
+            color: #39739d;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            font-size: 13px;
+            text-transform: lowercase;
         }
         .item-list {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+            border-top: 1px solid #e4e6e8;
         }
         .item-list li {
-            margin-bottom: 30px;
-            padding: 25px;
-            background-color: #f8f9fa; 
-            border-radius: 20px;
-            border: 4px solid #0c2461; /* Deep blue borders */
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .item-list li:hover {
-            transform: translateY(-5px);
-            box-shadow: 6px 6px 0px #feca57; /* Super Saiyan Gold aura on hover */
+            padding: 16px 0;
+            border-bottom: 1px solid #e4e6e8;
+            display: flex;
+            flex-direction: column;
         }
         .book-title {
-            font-size: 1.6em;
-            font-weight: 900;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            color: #e55039; /* Kaioken Red for titles */
+            font-size: 1.15em;
+            font-weight: 400;
+            margin: 0 0 6px 0;
         }
-        .book-author {
-            font-size: 1.1em;
-            color: #7f8c8d;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .book-title a {
+            color: #0074cc;
+            text-decoration: none;
+        }
+        .book-title a:hover {
+            color: #0a95ff;
+            text-decoration: underline;
         }
         .book-review {
-            font-size: 1.15em;
-            line-height: 1.6;
-            color: #2c3e50;
+            font-size: 14px;
+            color: #3b4045;
+            margin-bottom: 8px;
+            max-width: 800px;
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #0c2461;
-            background-color: #feca57; /* Gold button */
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 12px;
-            border: 3px solid #0c2461; 
-            transition: all 0.2s ease;
+        /* Replicate the Stack Exchange user info box for authors */
+        .user-card-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 4px;
         }
-        .back-link:hover {
-            background-color: #48dbfb; /* Shifts to Cyan on hover */
-            color: #0c2461;
-            border-color: #0c2461;
-            box-shadow: 4px 4px 0px #e55039; /* Kaioken Red shadow */
+        .user-card {
+            background-color: #f8f9f9;
+            padding: 5px 7px;
+            width: 150px;
+            border-radius: 3px;
+        }
+        .user-action-time {
+            font-size: 12px;
+            color: #6a737c;
+            margin-bottom: 4px;
+        }
+        .user-details {
+            font-size: 12px;
+            color: #0074cc;
         }
     </style>
 </head>
 <body>
+    <div class="top-bar"></div>
     <div class="container">
         
-        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        <div class="header-wrapper">
+            <h1>Sources</h1>
+            <a href="index.html" class="back-link">Return to Home</a>
+        </div>
         
-        <h1>Sources</h1>
         <div class="description">
             A curated bibliography of the textbooks, lecture notes, and references that have shaped my understanding of mathematics.
         </div>
-        
-        <div class="divider"></div>
 
         <!-- Abstract Algebra Section -->
         <div class="area-section">
-            <h2 class="area-title">Abstract Algebra</h2>
+            <span class="tag">abstract-algebra</span>
             <ul class="item-list">
                 <li>
-                    <div class="book-title">Algebra</div>
-                    <div class="book-author">by Michael Artin</div>
+                    <h3 class="book-title"><a href="#">Algebra</a></h3>
                     <div class="book-review">This one has a great quality of exercises, and I personally like the way he introduces quotient rings. It is an excellent book for abstract algebra.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">Michael Artin</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">Abstract Algebra</div>
-                    <div class="book-author">by David S. Dummit and Richard M. Foote</div>
+                    <h3 class="book-title"><a href="#">Abstract Algebra</a></h3>
                     <div class="book-review">I would say this has more exercises compared to other books, and for the exercises, the quality is on par with Artin. However, it introduces you to many more topics that are not covered in Artin.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">David S. Dummit and Richard M. Foote</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">A First Course in Abstract Algebra</div>
-                    <div class="book-author">by John B. Fraleigh</div>
+                    <h3 class="book-title"><a href="#">A First Course in Abstract Algebra</a></h3>
                     <div class="book-review">Some of the problems in this book gave me valuable tools to tackle other mathematical problems.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">John B. Fraleigh</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">Algebra: Chapter 0</div>
-                    <div class="book-author">by Paolo Aluffi</div>
+                    <h3 class="book-title"><a href="#">Algebra: Chapter 0</a></h3>
                     <div class="book-review">I don’t suggest this for beginners or those who do not know category theory. But I can say if anyone knows a little bit of category theory, it is a very good choice for a secondary course.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">Paolo Aluffi</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">Algebra: A Graduate Course</div>
-                    <div class="book-author">by I. Martin Isaacs</div>
+                    <h3 class="book-title"><a href="#">Algebra: A Graduate Course</a></h3>
                     <div class="book-review">I am currently working through this and I can say it is one of the books I should have done earlier in my undergraduate studies. It has a great quality of problems.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">I. Martin Isaacs</div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
 
         <!-- Metric Spaces Section -->
         <div class="area-section">
-            <h2 class="area-title">Metric Spaces</h2>
+            <span class="tag">metric-spaces</span>
             <ul class="item-list">
                 <li>
-                    <div class="book-title">Real Analysis</div>
-                    <div class="book-author">by N.L. Carothers</div>
+                    <h3 class="book-title"><a href="#">Real Analysis</a></h3>
                     <div class="book-review">An excellent book that is highly rich in exercises. I personally learned a tremendous amount about metric spaces from this text.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">N.L. Carothers</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">Principles of Mathematical Analysis</div>
-                    <div class="book-author">by Walter Rudin</div>
+                    <h3 class="book-title"><a href="#">Principles of Mathematical Analysis</a></h3>
                     <div class="book-review">Of course. A definitive classic.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">Walter Rudin</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">Set Theory and Metric Spaces</div>
-                    <div class="book-author">by Irving Kaplansky</div>
+                    <h3 class="book-title"><a href="#">Set Theory and Metric Spaces</a></h3>
                     <div class="book-review">I am currently going through this, and it is an excellent book. If you truly want to understand metric spaces from the ground up, I highly recommend going through it.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">Irving Kaplansky</div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
 
         <!-- General Point Set Topology Section -->
         <div class="area-section">
-            <h2 class="area-title">General Point Set Topology</h2>
+            <span class="tag">general-topology</span>
             <ul class="item-list">
                 <li>
-                    <div class="book-title">Topology</div>
-                    <div class="book-author">by James R. Munkres</div>
+                    <h3 class="book-title"><a href="#">Topology</a></h3>
                     <div class="book-review">The standard textbook for the subject. If you really want to do rigorous mathematics, you must go through it. When I first saw the definition of a topology, I didn't understand what we were doing—which I think is very natural for beginners. Consistency and persistence are key here.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">James R. Munkres</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">Topology Without Tears</div>
-                    <div class="book-author">by Sidney A. Morris</div>
+                    <h3 class="book-title"><a href="#">Topology Without Tears</a></h3>
                     <div class="book-review">A great resource for beginners, but its main drawback is that it can become a way to escape the rigorous mathematics found in Munkres. I personally used this for my undergraduate course, but later realized that Munkres is ultimately the standard I needed to master.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">Sidney A. Morris</div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <div class="book-title">General Topology</div>
-                    <div class="book-author">by Ryszard Engelking</div>
+                    <h3 class="book-title"><a href="#">General Topology</a></h3>
                     <div class="book-review">I am trying to go through this whenever I have time. It is quite terse, but it provides a massive amount of results that you can easily generalize further.</div>
+                    <div class="user-card-wrapper">
+                        <div class="user-card">
+                            <div class="user-action-time">author</div>
+                            <div class="user-details">Ryszard Engelking</div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
