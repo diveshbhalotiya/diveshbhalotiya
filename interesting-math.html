@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interesting Mathematical Things</title>
 
+    <!-- MathJax Script for LaTeX rendering -->
     <script>
         MathJax = {
             tex: {
@@ -16,82 +17,112 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-    <style>
         body {
-            background-color: #fafafa;
-            color: #222;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            /* Tom's signature slate blue-gray fur color with a subtle cartoon dot pattern */
+            background-color: #8da3b8; 
+            background-image: radial-gradient(#a3b8cc 15%, transparent 15%), radial-gradient(#a3b8cc 15%, transparent 15%);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            color: #2c3e50; 
+            /* Playful cartoon fonts */
+            font-family: 'Comic Sans MS', "Chalkboard SE", "Comic Neue", sans-serif; 
             margin: 0;
-            padding: 0;
+            padding: 60px 20px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 100px 40px;
+            padding: 60px;
+            background-color: #ffffff; /* Tom's white muzzle and tummy */
+            border-radius: 30px;
+            border: 6px solid #2c3e50; /* Thick cartoon outline */
+            box-shadow: 12px 12px 0px #e74c3c; /* Bright red drop shadow */
         }
         h1 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
             font-size: 3.5em;
-            font-weight: normal;
+            font-weight: 900;
             line-height: 1.1;
-            margin: 0 0 20px 0;
-            color: #111;
-            letter-spacing: -1px;
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .description {
-            font-size: 1.15em;
-            color: #555;
+            font-size: 1.25em;
+            color: #576574;
+            margin-bottom: 40px;
+            font-weight: bold;
             line-height: 1.6;
-            margin-bottom: 50px;
         }
         .divider {
-            border-top: 1px solid #ddd;
-            margin-bottom: 50px;
+            border-top: 5px dashed #f1c40f; /* Yellow dashed line */
+            margin-bottom: 40px;
         }
         .area-section {
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
         .area-title {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 1.8em;
+            font-size: 2.2em;
+            font-weight: 900;
             margin-bottom: 25px;
-            color: #111;
-            border-bottom: 1px dashed #ccc;
-            padding-bottom: 10px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #f1c40f;
         }
         .item-list {
             list-style-type: none;
             padding: 0;
         }
         .item-list li {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #f8f9fa; /* Light gray box for each directory item */
+            border-radius: 20px;
+            border: 4px solid #2c3e50;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .item-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 6px 6px 0px #f1c40f; /* Playful yellow bounce effect on hover */
         }
         .item-title {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #111;
-            margin-bottom: 8px;
+            font-size: 1.6em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
-        .item-desc {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #444;
-        }
-        a {
-            color: #2563eb;
+        .item-title a {
+            color: #e74c3c;
             text-decoration: none;
         }
-        a:hover {
+        .item-title a:hover {
+            color: #c0392b;
             text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #f1c40f;
+        }
+        .item-desc {
+            font-size: 1.15em;
+            line-height: 1.6;
+            color: #2c3e50;
         }
         .back-link {
             display: inline-block;
-            margin-bottom: 40px;
-            font-size: 0.9em;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #666;
+            color: #e74c3c;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            color: #c0392b;
+            text-decoration: underline;
+            text-decoration-style: dashed;
+            text-decoration-color: #f1c40f;
         }
     </style>
 </head>
@@ -102,7 +133,7 @@
         
         <h1>Interesting<br>Mathematical Things</h1>
         <div class="description">
-         I am documenting them here because you may find them useful for your own mathematical journey.
+            A growing collection of theorems, paradoxes, and clever ideas that caught my attention. I am documenting them here because you may find them useful for your own mathematical journey.
         </div>
         
         <div class="divider"></div>
@@ -115,7 +146,6 @@
                     <div class="item-title"><a href="unique-maximal-subgroup.html">Unique Maximal Subgroup</a></div>
                     <div class="item-desc">A neat proof showing that if a finite group has a unique maximal subgroup, its order must be a prime power. Inspired by a problem in I. Martin Isaacs' <em>Algebra: A Graduate Course</em>.</div>
                 </li>
-
                 <li>
                     <div class="item-title"><a href="abelian-group-order.html">Elements of a Finite Abelian Group</a></div>
                     <div class="item-desc">An elegant proof showing that for any element $g$ in a finite Abelian group of order $k$, $g^k = e$. This relies on a beautiful multiplication trick rather than invoking Lagrange's theorem.</div>
