@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divesh Bhalotiya - Mathematics</title>
     <style>
+        * {
+            box-sizing: border-box; /* Ensures padding doesn't break the width */
+        }
         body {
             /* Tom's signature slate blue-gray fur color with a subtle cartoon dot pattern */
             background-color: #8da3b8; 
@@ -101,6 +104,34 @@
             text-decoration-style: dashed;
             text-decoration-color: #f1c40f;
         }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+            .container {
+                padding: 30px 20px;
+                border-width: 4px;
+                box-shadow: 8px 8px 0px #e74c3c; /* Scaled down so it doesn't clip */
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            .description {
+                font-size: 1.1em;
+            }
+            .item-list li {
+                padding: 20px 15px; /* Gives the text more room to breathe */
+                margin-bottom: 20px;
+            }
+            .item-title {
+                font-size: 1.5em;
+            }
+            .item-desc {
+                font-size: 1.05em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -119,7 +150,7 @@
                 <div class="item-desc">My academic background, mathematical interests, and a link to my CV.</div>
             </li>
             <li>
-                <div class="item-title"><a href="source.html">Sources</a></div>
+                <div class="item-title"><a href="source-files.html">Sources</a></div>
                 <div class="item-desc">A curated bibliography of the textbooks, lecture notes, and references that have shaped my understanding of mathematics.</div>
             </li>
             <li>
@@ -134,7 +165,7 @@
                 <div class="item-desc">A collection of beautiful theorems, clever proofs, and mathematical concepts that I find truly fascinating, organized by area.</div>
             </li>
             <li>
-                <div class="item-title"><a href="Mathematical-views.html">Mathematical Views</a></div>
+                <div class="item-title"><a href="mathematical-views.html">Mathematical Views</a></div>
                 <div class="item-desc">A collection of my personal philosophies on mathematics, thoughts on learning, and reflections on the mathematical community.</div>
             </li>
         </ul>
