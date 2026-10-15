@@ -9,203 +9,132 @@
             box-sizing: border-box;
         }
         body {
-            /* Authentic Discord Dark Theme Background */
-            background-color: #313338;
-            color: #dbdee1;
-            /* Discord's default font stack */
-            font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333333;
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
-            padding: 0;
-            line-height: 1.5;
+            padding: 60px 20px;
+            line-height: 1.8;
         }
-        .chat-container {
-            max-width: 850px;
+        .container {
+            max-width: 750px;
             margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .header {
-            border-bottom: 1px solid #3f4147;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
+            background-color: #ffffff;
+            padding: 50px 60px;
+            border-radius: 8px;
+            border-top: 6px solid #8b5a2b; /* Subtle brown accent matching your Views page */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         h1 {
-            color: #ffffff;
-            font-size: 1.6em;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
-        .hash {
-            color: #80848e;
-            font-size: 1.3em;
-            margin-right: 8px;
-            font-weight: 300;
-        }
-        .message-group {
-            display: flex;
-            margin-top: 17px;
-        }
-        .avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #5865F2; /* Discord Blurple */
-            margin-right: 16px;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .message-content {
-            flex-grow: 1;
-        }
-        .author-line {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 4px;
-        }
-        .author-name {
-            /* A custom "role" color for your username */
-            color: #2ecc71; 
-            font-weight: 500;
-            font-size: 1em;
-            margin-right: 8px;
-        }
-        .author-name:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        .timestamp {
-            color: #949ba4;
-            font-size: 0.75em;
-            margin-left: 0.25rem;
-        }
-        .text p {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 2.2em;
+            color: #222222;
             margin: 0 0 10px 0;
-            font-size: 1.05em;
+            line-height: 1.3;
         }
-        /* Styling the quote like a Discord Embed */
-        .embed {
-            background-color: #2b2d31;
-            border-left: 4px solid #1e1f22;
-            border-radius: 4px;
-            padding: 12px 16px;
-            margin: 12px 0 20px 0;
-            max-width: 700px;
-        }
-        .embed p {
-            margin: 0 0 10px 0;
-            color: #dbdee1;
+        .date {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #888888;
             font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 15px;
         }
-        .embed p:last-child {
-            margin: 0;
-        }
-        .embed-author {
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 8px;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-        }
-        .embed-avatar {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #e67e22; /* Orange avatar for jonorangejuicy */
-            margin-right: 8px;
+        p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
         }
         a {
-            color: #00a8fc; /* Discord link blue */
+            color: #c0392b;
             text-decoration: none;
+            border-bottom: 1px dotted #c0392b;
         }
         a:hover {
-            text-decoration: underline;
+            color: #e74c3c;
+            border-bottom-style: solid;
+        }
+        blockquote {
+            background-color: #f4f6f7;
+            border-left: 4px solid #bdc3c7;
+            margin: 30px 0;
+            padding: 20px 30px;
+            font-size: 1.05em;
+            color: #555555;
+            font-style: italic;
+            border-radius: 0 4px 4px 0;
+        }
+        blockquote p {
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        blockquote p:last-child {
+            margin-bottom: 0;
         }
         .back-link {
             display: inline-block;
-            color: #949ba4;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 0.9em;
-            font-weight: 600;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            color: #8b5a2b;
+            text-decoration: none;
+            border: none;
         }
         .back-link:hover {
-            color: #dbdee1;
-            text-decoration: none;
+            color: #c0392b;
         }
 
         /* Mobile Adjustments */
         @media (max-width: 600px) {
-            .chat-container {
+            body {
                 padding: 20px 15px;
             }
+            .container {
+                padding: 30px 20px;
+            }
             h1 {
-                font-size: 1.3em;
+                font-size: 1.8em;
             }
-            .avatar {
-                width: 35px;
-                height: 35px;
-                font-size: 1em;
-                margin-right: 12px;
+            p {
+                font-size: 1.05em;
             }
-            .text p {
-                font-size: 1em;
-            }
-            .embed {
-                padding: 10px 12px;
+            blockquote {
+                padding: 15px 20px;
+                margin: 20px 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="chat-container">
+    <div class="container">
         
         <a href="mathematical-views.html" class="back-link">&larr; Return to Views</a>
         
-        <div class="header">
-            <h1><span class="hash">#</span> farewell-jonorangejuicy</h1>
-        </div>
+        <h1>Farewell to jonorangejuicy's Server</h1>
+        <div class="date">October 5, 2026</div>
 
-        <div class="message-group">
-            <div class="avatar">D</div>
-            <div class="message-content">
-                <div class="author-line">
-                    <span class="author-name">Divesh Bhalotiya</span>
-                    <span class="timestamp">10/05/2026 10:53 PM</span>
-                </div>
-                <div class="text">
-                    <p>Today I thought about starting a reading group on a specific subject, so I went to a <a href="https://discord.gg/qEzAZ9FmAM" target="_blank">Discord server</a> I used to frequent, only to find that the owner, jonorangejuicy, had archived it.</p>
-                    
-                    <p>Here is the original message from jonorangejuicy:</p>
-                    
-                    <div class="embed">
-                        <div class="embed-author">
-                            <div class="embed-avatar"></div>
-                            jonorangejuicy
-                        </div>
-                        <p>"Hi everyone, it's the server owner here.</p>
-                        <p>This server has had a good run. But now, I feel it's finally time to archive it. That means no one will be allowed to post any more messages in the main channels. But all the existing channel history and content will remain. In particular, the library channels will still be available for viewing. (I personally still use &lt;#826048888640503838&gt; a lot!)</p>
-                        <p>The reason is simple: With server activity finally winding down, it becomes harder to justify the effort put into monitoring and moderating it, compared to doing other things in life. But no moderation also means not cleaning up the spam that every Discord server gets. So in the end, locking down all the channels is the most efficient choice long-term.</p>
-                        <p>The Human role also loses its purpose, and it is no longer needed to view the channels.</p>
-                        <p>I don't want to get too personal or sappy with this server's origins and history. This server has existed since 2021, and it has been in my life for a significant period. I had many experiences and lessons from here. A lot of them, broadly speaking, showed how hard it is to be a good leader. These are lessons that I will always take with me.</p>
-                        <p>I can only express my gratitude at the many people who have joined this journey with me, putting in their time and enthusiasm - the staff, library contributors, and general members. I hope that many of you have had good experiences too, and I regret not being able to offer better.</p>
-                        <p>Thank you all, and I wish you good luck in your future endeavours!"</p>
-                    </div>
+        <p>Today I thought about starting a reading group on a specific subject, so I went to a <a href="https://discord.gg/qEzAZ9FmAM" target="_blank">Discord server</a> I used to frequent, only to find that the owner, jonorangejuicy, had archived it.</p>
+        
+        <p>Here is the original message from jonorangejuicy:</p>
+        
+        <blockquote>
+            <p>"Hi everyone, it's the server owner here.</p>
+            <p>This server has had a good run. But now, I feel it's finally time to archive it. That means no one will be allowed to post any more messages in the main channels. But all the existing channel history and content will remain. In particular, the library channels will still be available for viewing. (I personally still use &lt;#826048888640503838&gt; a lot!)</p>
+            <p>The reason is simple: With server activity finally winding down, it becomes harder to justify the effort put into monitoring and moderating it, compared to doing other things in life. But no moderation also means not cleaning up the spam that every Discord server gets. So in the end, locking down all the channels is the most efficient choice long-term.</p>
+            <p>The Human role also loses its purpose, and it is no longer needed to view the channels.</p>
+            <p>I don't want to get too personal or sappy with this server's origins and history. This server has existed since 2021, and it has been in my life for a significant period. I had many experiences and lessons from here. A lot of them, broadly speaking, showed how hard it is to be a good leader. These are lessons that I will always take with me.</p>
+            <p>I can only express my gratitude at the many people who have joined this journey with me, putting in their time and enthusiasm - the staff, library contributors, and general members. I hope that many of you have had good experiences too, and I regret not being able to offer better.</p>
+            <p>Thank you all, and I wish you good luck in your future endeavours!"</p>
+        </blockquote>
 
-                    <p>After reading this message, I felt genuinely sad because I used this server for a reading group in my past.</p>
-                    
-                    <p>To me, this decline reflects how badly AI is affecting the way we engage to discuss or learn mathematics. Over the past few months, I've observed a similar drop in activity across other Discord servers I frequently use, as people turn to AI instead of talking to each other.</p>
-                </div>
-            </div>
-        </div>
-
+        <p>After reading this message, I felt genuinely sad because I used this server for a reading group in my past.</p>
+        
+        <p>To me, this decline reflects how badly AI is affecting the way we engage to discuss or learn mathematics. Over the past few months, I've observed a similar drop in activity across other Discord servers I frequently use, as people turn to AI instead of talking to each other.</p>
+        
     </div>
 </body>
 </html>
