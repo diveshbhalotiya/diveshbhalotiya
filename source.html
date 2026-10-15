@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematical Sources</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            /* Aged parchment / stone background */
             background: radial-gradient(circle, #eaddc5 0%, #c4a98b 100%);
             color: #3e2723;
-            /* Classical serif fonts */
             font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 60px 20px;
@@ -26,7 +27,6 @@
                 10px 15px 25px rgba(0,0,0,0.4);
             position: relative;
         }
-        /* Top and Bottom Scroll Rollers */
         .scroll-container::before, .scroll-container::after {
             content: '';
             position: absolute;
@@ -95,7 +95,7 @@
             padding-left: 35px;
         }
         .book-list li::before {
-            content: '❖'; /* Ancient diamond symbol */
+            content: '❖'; 
             position: absolute;
             left: 0;
             top: 2px;
@@ -119,6 +119,19 @@
             line-height: 1.7;
             color: #3e2723;
         }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
+            .scroll-container { padding: 30px 20px; box-shadow: inset 0 0 30px rgba(139, 90, 43, 0.1), 5px 8px 15px rgba(0,0,0,0.3); }
+            .scroll-container::before, .scroll-container::after { left: -5px; right: -5px; }
+            h1 { font-size: 2.2em; letter-spacing: 3px; }
+            .description { font-size: 1.1em; }
+            .category-title { font-size: 1.8em; }
+            .book-list li { padding-left: 25px; margin-bottom: 25px; }
+            .book-title { font-size: 1.3em; }
+            .book-review { font-size: 1.05em; }
+        }
     </style>
 </head>
 <body>
@@ -131,7 +144,6 @@
             A curated bibliography of the texts, archaic notes, and references that have shaped my understanding of the mathematical arts.
         </div>
 
-        <!-- Abstract Algebra Section -->
         <h2 class="category-title">Abstract Algebra</h2>
         <ul class="book-list">
             <li>
@@ -161,7 +173,6 @@
             </li>
         </ul>
 
-        <!-- Metric Spaces Section -->
         <h2 class="category-title">Metric Spaces</h2>
         <ul class="book-list">
             <li>
@@ -181,7 +192,6 @@
             </li>
         </ul>
 
-        <!-- General Point Set Topology Section -->
         <h2 class="category-title">General Point Set Topology</h2>
         <ul class="book-list">
             <li>
