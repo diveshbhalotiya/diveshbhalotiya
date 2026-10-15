@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematical Views</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            /* Oceanic Blue with a fun underwater bubble pattern */
             background-color: #00a8ff; 
             background-image: 
                 radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 10px, transparent 11px),
@@ -15,7 +17,6 @@
                 radial-gradient(circle at 85% 20%, rgba(255,255,255,0.3) 12px, transparent 13px);
             background-size: 150px 150px;
             color: #3d2314; 
-            /* Playful cartoon fonts */
             font-family: 'Comic Sans MS', "Chalkboard SE", "Comic Neue", sans-serif; 
             margin: 0;
             padding: 60px 20px;
@@ -24,23 +25,22 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 60px;
-            /* SpongeBob Yellow with subtle green sponge "pores" */
             background-color: #fce74c; 
             background-image: radial-gradient(rgba(176, 171, 38, 0.25) 15%, transparent 16%);
             background-size: 40px 40px;
             border-radius: 30px;
-            border: 6px solid #8b5a2b; /* Square pants brown outline */
-            box-shadow: 12px 12px 0px #c0392b; /* Red tie drop shadow */
+            border: 6px solid #8b5a2b; 
+            box-shadow: 12px 12px 0px #c0392b; 
         }
         h1 {
             font-size: 3.5em;
             font-weight: 900;
             line-height: 1.1;
             margin: 0 0 15px 0;
-            color: #8b5a2b; /* Pants brown */
+            color: #8b5a2b; 
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 0px #ffffff; /* White pop effect */
+            text-shadow: 2px 2px 0px #ffffff; 
         }
         .description {
             font-size: 1.25em;
@@ -48,12 +48,12 @@
             margin-bottom: 40px;
             font-weight: bold;
             line-height: 1.6;
-            background-color: rgba(255, 255, 255, 0.6); /* Slightly readable backing */
+            background-color: rgba(255, 255, 255, 0.6); 
             padding: 15px;
             border-radius: 15px;
         }
         .divider {
-            border-top: 5px dashed #c0392b; /* Red tie dashed line */
+            border-top: 5px dashed #c0392b; 
             margin-bottom: 40px;
         }
         .item-list {
@@ -63,19 +63,19 @@
         .item-list li {
             margin-bottom: 30px;
             padding: 25px;
-            background-color: #ffffff; /* Crisp white like his shirt */
+            background-color: #ffffff; 
             border-radius: 20px;
-            border: 4px solid #8b5a2b; /* Pants brown border */
+            border: 4px solid #8b5a2b; 
             transition: transform 0.2s, box-shadow 0.2s;
         }
         .item-list li:hover {
             transform: translateY(-5px);
-            box-shadow: 6px 6px 0px #00a8ff; /* Ocean blue bounce effect on hover */
+            box-shadow: 6px 6px 0px #00a8ff; 
         }
         .item-date {
             font-size: 0.95em;
             font-weight: bold;
-            color: #c0392b; /* Red */
+            color: #c0392b; 
             text-transform: uppercase;
             margin-bottom: 8px;
             letter-spacing: 1px;
@@ -119,6 +119,17 @@
             color: #ffffff;
             background-color: #c0392b;
             border-color: #c0392b;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
+            .container { padding: 30px 20px; border-width: 4px; box-shadow: 6px 6px 0px #c0392b; }
+            h1 { font-size: 2.2em; }
+            .description { font-size: 1.1em; }
+            .item-list li { padding: 20px 15px; margin-bottom: 20px; }
+            .item-title { font-size: 1.4em; }
+            .item-desc { font-size: 1.05em; }
         }
     </style>
 </head>
