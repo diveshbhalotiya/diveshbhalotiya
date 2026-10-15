@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farewell to jonorangejuicy's Server</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             /* Authentic Discord Dark Theme Background */
             background-color: #313338;
@@ -79,6 +82,7 @@
         .timestamp {
             color: #949ba4;
             font-size: 0.75em;
+            margin-left: 0.25rem;
         }
         .text p {
             margin: 0 0 10px 0;
@@ -136,12 +140,34 @@
             color: #dbdee1;
             text-decoration: none;
         }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .chat-container {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            .avatar {
+                width: 35px;
+                height: 35px;
+                font-size: 1em;
+                margin-right: 12px;
+            }
+            .text p {
+                font-size: 1em;
+            }
+            .embed {
+                padding: 10px 12px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="chat-container">
         
-        <a href="Mathematical-views.html" class="back-link">&larr; Return to Views</a>
+        <a href="mathematical-views.html" class="back-link">&larr; Return to Views</a>
         
         <div class="header">
             <h1><span class="hash">#</span> farewell-jonorangejuicy</h1>
@@ -176,8 +202,6 @@
                     <p>After reading this message, I felt genuinely sad because I used this server for a reading group in my past.</p>
                     
                     <p>To me, this decline reflects how badly AI is affecting the way we engage to discuss or learn mathematics. Over the past few months, I've observed a similar drop in activity across other Discord servers I frequently use, as people turn to AI instead of talking to each other.</p>
-                    
-                    
                 </div>
             </div>
         </div>
