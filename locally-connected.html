@@ -60,16 +60,27 @@
         blockquote strong {
             color: #222222;
         }
-        .challenge-text {
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-size: 1.1em;
-            font-weight: bold;
-            color: #c0392b;
+        .solution-section {
             margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eeeeee;
+        }
+        .solution-title {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #8e44ad;
+            margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-top: 1px solid #eeeeee;
-            padding-top: 20px;
+        }
+        ol {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        ol li {
+            margin-bottom: 15px;
         }
         .back-link {
             display: inline-block;
@@ -98,7 +109,7 @@
             h1 {
                 font-size: 1.8em;
             }
-            p {
+            p, ol {
                 font-size: 1.05em;
             }
             blockquote {
@@ -130,10 +141,17 @@
 
         <p><strong>Question:</strong> Are Def 1 and Def 2 equivalent?</p>
         
-        <p>Def 2 definitely implies Def 1, since every open neighbourhood is inherently a neighbourhood. The interesting part is proving the reverse.</p>
+        <p>Def 2 definitely implies Def 1. The interesting part is proving the reverse.</p>
         
-        <div class="challenge-text">
-            Now try it yourself!
+        <div class="solution-section">
+            <div class="solution-title">Solution Roadmap</div>
+            <p>Let Def 1 hold.</p>
+            <ol>
+                <li><strong>Step 1:</strong> Show each connected component is open.</li>
+                <li><strong>Step 2:</strong> Each open set $U$ is a locally connected space (LCP).</li>
+                <li><strong>Step 3:</strong> By Step 1, each connected component of $U$ is open.</li>
+                <li><strong>Step 4:</strong> Now for each $x$ and for each open neighbourhood $U$ of $x$, take $V$ as the connected component of $x$ in $U$. It is open since it is open in $U$.</li>
+            </ol>
         </div>
 
     </div>
