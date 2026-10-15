@@ -16,128 +16,124 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
         body {
-            background-color: #45b6fe; 
-            background-image: radial-gradient(#2fa1e6 15%, transparent 15%), radial-gradient(#2fa1e6 15%, transparent 15%);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
-            color: #2c3e50; 
-            font-family: 'Comic Sans MS', "Chalkboard SE", "Comic Neue", sans-serif; 
+            background-color: #f9f9f9;
+            color: #333333;
+            font-family: 'Georgia', 'Times New Roman', serif;
             margin: 0;
             padding: 60px 20px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         .container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
-            padding: 60px;
-            background-color: #ffffff; 
-            border-radius: 30px;
-            border: 6px solid #8e44ad; 
-            box-shadow: 12px 12px 0px #fd79a8; 
+            background-color: #ffffff;
+            padding: 50px 60px;
+            border-radius: 8px;
+            /* Using a purple accent line to subtly match the Interesting Math section */
+            border-top: 6px solid #8e44ad; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
         h1 {
-            font-size: 2.8em;
-            font-weight: 900;
-            line-height: 1.2;
-            margin: 0 0 25px 0;
-            color: #8e44ad; 
-            text-transform: uppercase;
-            text-shadow: 2px 2px 0px #2ecc71; 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 2.2em;
+            color: #222222;
+            margin: 0 0 30px 0;
+            line-height: 1.3;
         }
-        .content-block {
-            font-size: 1.2em;
-            color: #2c3e50;
-            margin-bottom: 25px;
+        p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
         }
-        .content-block p {
-            margin-bottom: 15px;
-        }
-        .definition-box {
-            background-color: #fdfdfd;
-            border-left: 5px solid #e67e22;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 15px 15px 0;
-            box-shadow: 3px 3px 0px #f39c12;
-        }
-        .proof-box {
-            background-color: #fdfdfd;
-            border: 3px dashed #2ecc71;
-            padding: 20px;
+        blockquote {
+            background-color: #f4f6f7;
+            border-left: 4px solid #8e44ad;
             margin: 30px 0;
-            border-radius: 15px;
-        }
-        .proof-title {
-            font-weight: bold;
-            color: #2ecc71;
-            text-transform: uppercase;
-            margin-bottom: 15px;
+            padding: 20px 30px;
             font-size: 1.1em;
+            color: #444444;
+            border-radius: 0 4px 4px 0;
+        }
+        blockquote strong {
+            color: #222222;
+        }
+        .challenge-text {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #c0392b;
+            margin-top: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-top: 1px solid #eeeeee;
+            padding-top: 20px;
         }
         .back-link {
             display: inline-block;
             margin-bottom: 30px;
-            font-size: 1.1em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 0.9em;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #ffffff;
-            background-color: #fd79a8; 
+            color: #8e44ad;
             text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 12px;
-            border: 3px solid #8e44ad;
-            transition: all 0.2s ease;
+            border: none;
         }
         .back-link:hover {
-            background-color: #8e44ad;
-            box-shadow: 4px 4px 0px #2ecc71;
+            color: #9b59b6;
         }
 
+        /* Mobile Adjustments */
         @media (max-width: 600px) {
-            body { padding: 20px 10px; }
-            .container { padding: 30px 20px; border-width: 4px; box-shadow: 6px 6px 0px #fd79a8; }
-            h1 { font-size: 2em; }
-            .content-block { font-size: 1.1em; }
+            body {
+                padding: 20px 15px;
+            }
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1.05em;
+            }
+            blockquote {
+                padding: 15px 20px;
+                margin: 20px 0;
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <a href="interesting-math.html" class="back-link">&larr; Back to Interesting Math</a>
+        <a href="interesting-math.html" class="back-link">&larr; Return to Interesting Math</a>
         
         <h1>Equivalence of Locally Connected Definitions</h1>
+
+        <p>I usually like to play with definitions. Given two definitions, I enjoy figuring out which one is stronger, which one is weaker, or whether both are actually equivalent. I recently found one such problem regarding locally connected spaces.</p>
         
-        <div class="content-block">
-            <p>I usually like to play with definitions. Given two definitions, I enjoy figuring out which one is stronger, which one is weaker, or whether both are actually equivalent. I recently found one such problem regarding locally connected spaces.</p>
-            
-            <p>Let's define two definitions for a locally connected space (LCP):</p>
+        <p>Let's define two definitions for a locally connected space (LCP):</p>
 
-            <div class="definition-box">
-                <strong>Def 1:</strong> A topological space $X$ is said to be locally connected if for each $x \in X$ and for each open neighbourhood $U$ containing $x$, there exists a connected neighbourhood $V$ such that $x \in V \subseteq U$.
-            </div>
+        <blockquote>
+            <strong>Def 1:</strong> A topological space $X$ is said to be locally connected if for each $x \in X$ and for each open neighbourhood $U$ containing $x$, there exists a connected neighbourhood $V$ such that $x \in V \subseteq U$.
+        </blockquote>
 
-            <div class="definition-box">
-                <strong>Def 2:</strong> A topological space $X$ is said to be locally connected if for each $x \in X$ and for each open neighbourhood $U$ containing $x$, there exists a connected <em>open</em> neighbourhood $V$ such that $x \in V \subseteq U$.
-            </div>
+        <blockquote>
+            <strong>Def 2:</strong> A topological space $X$ is said to be locally connected if for each $x \in X$ and for each open neighbourhood $U$ containing $x$, there exists a connected <em>open</em> neighbourhood $V$ such that $x \in V \subseteq U$.
+        </blockquote>
 
-            <p><strong>Question:</strong> Are Def 1 and Def 2 equivalent?</p>
-            <p>Def 2 definitely implies Def 1, since every open neighbourhood is a neighbourhood. The interesting part is proving the reverse.</p>
-        </div>
-
-        <div class="proof-box">
-            <div class="proof-title">Proof that Def 1 implies Def 2</div>
-            <div class="content-block">
-                <p>Assume Def 1 holds for the space $X$.</p>
-                <ol>
-                    <li><strong>Step 1 & 2:</strong> Notice that any open subset $U \subseteq X$ inherits the property from Def 1. We want to show that the connected components of any open set $U$ are open in $X$.</li>
-                    <li><strong>Step 3:</strong> Let $C$ be a connected component of an open set $U$. For any $y \in C$, since $U$ is an open neighbourhood of $y$, Def 1 guarantees a connected neighbourhood $N$ such that $y \in N \subseteq U$. Since $C$ is the maximal connected subset of $U$ containing $y$, it must be that $N \subseteq C$. Because $N$ is a neighbourhood of $y$, it contains an open set around $y$. Thus, $C$ is open.</li>
-                    <li><strong>Step 4:</strong> Now, for each $x \in X$ and for each open neighbourhood $U$ of $x$, take $V$ to be the connected component of $x$ in $U$. $V$ is connected, and by the previous steps, $V$ is open since it is open in $U$. Since $x \in V \subseteq U$, Def 2 is satisfied.</li>
-                </ol>
-            </div>
+        <p><strong>Question:</strong> Are Def 1 and Def 2 equivalent?</p>
+        
+        <p>Def 2 definitely implies Def 1, since every open neighbourhood is inherently a neighbourhood. The interesting part is proving the reverse.</p>
+        
+        <div class="challenge-text">
+            Now try it yourself!
         </div>
 
     </div>
