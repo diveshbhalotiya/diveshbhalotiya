@@ -9,162 +9,115 @@
             box-sizing: border-box;
         }
         body {
-            background-color: #f4ebd8;
-            background-image: radial-gradient(circle at top right, #fdf8e1, transparent 40%), 
-                              radial-gradient(circle at bottom left, #e8d5b5, transparent 40%);
-            color: #3e2723; 
-            font-family: 'Palatino Linotype', Palatino, Georgia, serif;
-            margin: 0;
-            padding: 60px 20px;
+            background-color: #ffffff;
+            color: #111111;
+            /* LaTeX-like academic font stack */
+            font-family: 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
             line-height: 1.6;
+            margin: 0;
+            padding: 50px 20px;
+            font-size: 18px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 50px 60px;
-            background-color: #ffffff;
-            border-radius: 4px;
-            border: 2px solid #b87333; 
-            box-shadow: 8px 8px 0px #8b5a2b; 
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             font-weight: normal;
-            margin: 0 0 10px 0;
-            color: #5c4033; 
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            border-bottom: 2px solid #d4af37; 
+            margin: 0 0 40px 0;
+            border-bottom: 1px solid #eeeeee;
             padding-bottom: 15px;
-        }
-        .intro-text {
-            font-size: 1.25em;
-            color: #4e342e;
-            margin-bottom: 40px;
-            margin-top: 30px;
-        }
-        .intro-text p {
-            margin-bottom: 15px;
-        }
-        .section {
-            margin-bottom: 40px;
-            padding: 25px;
-            background-color: #fcf8f2;
-            border-left: 4px solid #d4af37; 
-            box-shadow: 3px 3px 6px rgba(139, 90, 43, 0.1);
-        }
-        .section-title {
-            font-size: 1.6em;
-            color: #5c4033;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-        .section-meta {
-            font-size: 1em;
-            font-style: italic;
-            color: #8b5a2b;
-            margin-bottom: 15px;
-        }
-        .section-content {
-            font-size: 1.15em;
-            color: #3e2723;
-        }
-        .divider {
             text-align: center;
-            margin: 40px 0;
-            color: #d4af37;
-            font-size: 1.5em;
-            letter-spacing: 15px;
+        }
+        h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 5px;
+            color: #222222;
+        }
+        .meta {
+            font-style: italic;
+            color: #555555;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #0056b3;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
         }
         .cv-link-container {
-            text-align: center;
             margin-top: 50px;
+            text-align: center;
         }
         .cv-link {
             display: inline-block;
-            font-size: 1.2em;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #ffffff;
-            background-color: #8b5a2b;
-            text-decoration: none;
-            padding: 15px 35px;
-            border-radius: 2px;
-            border: 1px solid #5c4033;
-            transition: all 0.3s ease;
-        }
-        .cv-link:hover {
-            background-color: #d4af37;
-            color: #3e2723;
-            border-color: #b87333;
-            box-shadow: 4px 4px 0px #5c4033;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 0.9em;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #b87333;
+            color: #ffffff;
+            background-color: #333333;
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: all 0.2s ease;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
         }
-        .back-link:hover {
-            color: #5c4033;
-            border-bottom: 1px solid #5c4033;
+        .cv-link:hover {
+            background-color: #000000;
+            text-decoration: none;
         }
 
         /* Mobile Adjustments */
         @media (max-width: 600px) {
-            body { padding: 20px 10px; }
-            .container { padding: 30px 20px; box-shadow: 5px 5px 0px #8b5a2b; }
-            h1 { font-size: 2.2em; letter-spacing: 2px; }
-            .intro-text { font-size: 1.1em; }
-            .section { padding: 15px; }
-            .section-title { font-size: 1.3em; }
-            .section-content { font-size: 1.05em; }
+            body { padding: 30px 15px; font-size: 16px; }
+            h1 { font-size: 2em; margin-bottom: 30px; }
+            h2 { font-size: 1.3em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <a href="index.html" class="back-link">&larr; Return to Home</a>
+        <a href="index.html" class="nav-link">&larr; Return to Home</a>
 
         <h1>Divesh Bhalotiya</h1>
         
-        <div class="intro-text">
-            <p>I am a mathematician currently pursuing my Master's degree in Mathematics at the Harish-Chandra Research Institute (HRI) in Prayagraj. Prior to this, I completed my undergraduate studies at the Institute of Mathematics and Applications (IMA) in Bhubaneswar.</p>
-            
-            <p>My primary interests lie in advanced structural mathematics. I am deeply focused on Real Analysis, Abstract Algebra, Homological Algebra, Commutative Ring Theory, and Galois Groups.</p>
-        </div>
-
-        <div class="divider">&#10022; &#10022; &#10022;</div>
+        <p>I am a mathematician currently pursuing my Master's degree in Mathematics at the Harish-Chandra Research Institute (HRI) in Prayagraj. Prior to this, I completed my undergraduate studies at the Institute of Mathematics and Applications (IMA) in Bhubaneswar.</p>
+        
+        <p>My primary interests lie in advanced structural mathematics. I am deeply focused on Real Analysis, Abstract Algebra, Homological Algebra, Commutative Ring Theory, and Galois Groups.</p>
 
         <!-- Bachelor Thesis Section -->
-        <div class="section">
-            <h2 class="section-title">Bachelor Thesis</h2>
-            <div class="section-meta">Institute of Mathematics and Applications (IMA) &bull; Supervised by Dr. Jyoti Das Gupta, IIT Dhanbad</div>
-            <div class="section-content">
-                My undergraduate thesis focused on the Quillen-Suslin Theorem. This project was completed under the guidance of Dr. Jyoti Das Gupta from IIT Dhanbad, which further solidified my interest in rigorous mathematical structures and commutative algebra.
-            </div>
-        </div>
+        <h2>Bachelor Thesis</h2>
+        <div class="meta">Institute of Mathematics and Applications (IMA) &bull; Supervised by Dr. Jyoti Das Gupta, IIT Dhanbad</div>
+        <p>My undergraduate thesis focused on the Quillen-Suslin Theorem. This project was completed under the guidance of Dr. Jyoti Das Gupta from IIT Dhanbad, which further solidified my interest in rigorous mathematical structures and commutative algebra.</p>
 
         <!-- Summer Program Section -->
-        <div class="section">
-            <h2 class="section-title">Summer Research Program</h2>
-            <div class="section-meta">IISER Mohali &bull; May – July 2026 &bull; Supervised by Dr. Vaibhav Vaish</div>
-            <div class="section-content">
-                During my summer internship at the Indian Institute of Science Education and Research (IISER) Mohali, I worked under the guidance of Dr. Vaibhav Vaish. I rigorously studied the first ten chapters of Atiyah and MacDonald's <em>Introduction to Commutative Algebra</em>, ensuring I completed the exercises—because otherwise, reading it makes no sense. Following that, I also completed the first three chapters of Charles A. Weibel's <em>An Introduction to Homological Algebra</em>.
-            </div>
-        </div>
+        <h2>Summer Research Program</h2>
+        <div class="meta">IISER Mohali &bull; May – July 2026 &bull; Supervised by Dr. Vaibhav Vaish</div>
+        <p>During my summer internship at the Indian Institute of Science Education and Research (IISER) Mohali, I worked under the guidance of Dr. Vaibhav Vaish. I rigorously studied the first ten chapters of Atiyah and MacDonald's <em>Introduction to Commutative Algebra</em>, ensuring I completed the exercises—because otherwise, reading it makes no sense. Following that, I also completed the first three chapters of Charles A. Weibel's <em>An Introduction to Homological Algebra</em>.</p>
 
         <div class="cv-link-container">
             <a href="cv.pdf" class="cv-link" target="_blank">View My CV</a>
