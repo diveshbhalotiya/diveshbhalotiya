@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elements of a Finite Abelian Group</title>
     
-    <!-- MathJax for LaTeX rendering -->
     <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']],
-                displayMath: [['$$', '$$']]
-            }
-        };
+        MathJax = { tex: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] } };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -27,24 +21,9 @@
             padding: 40px 20px;
             font-size: 18px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        h1 {
-            font-size: 2.2em;
-            font-weight: normal;
-            margin: 0 0 10px 0;
-        }
-        .meta {
-            font-style: italic;
-            color: #555555;
-            font-size: 0.95em;
-        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 2.2em; font-weight: normal; margin: 0 0 10px 0; }
         .nav-link {
             display: inline-block;
             margin-bottom: 40px;
@@ -55,9 +34,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .nav-link:hover {
-            text-decoration: underline;
-        }
+        .nav-link:hover { text-decoration: underline; }
         .theorem {
             margin: 30px 0;
             padding: 20px;
@@ -75,22 +52,10 @@
             margin-bottom: 10px;
             color: #222222;
         }
-        .proof {
-            margin: 30px 0;
-        }
-        .proof-title {
-            font-style: italic;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .qed {
-            float: right;
-        }
-        p {
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
+        .proof { margin: 30px 0; }
+        .proof-title { font-style: italic; font-weight: bold; margin-bottom: 10px; }
+        .qed { float: right; }
+        p { margin-top: 0; margin-bottom: 15px; text-align: justify; }
         @media (max-width: 600px) {
             body { padding: 20px 15px; font-size: 16px; }
             h1 { font-size: 1.8em; }
@@ -104,10 +69,7 @@
         
         <header>
             <h1>Elements of a Finite Abelian Group</h1>
-            <div class="meta">A proof without invoking Lagrange's Theorem</div>
         </header>
-
-        <p>This is a wonderfully elegant trick. While it is standard to use Lagrange's Theorem to state that the order of an element divides the order of the group, for finite Abelian groups, we can prove this directly using a clever multiplication argument.</p>
 
         <div class="theorem">
             <strong>Theorem</strong>
@@ -124,9 +86,9 @@
             
             <p>$$S = \{g a_1, g a_2, \dots, g a_k\}$$</p>
 
-            <p>Because multiplying by a group element is a bijection (specifically, a permutation of the group), the set $S$ is exactly the same as the set $G$, just listed in a different order. Therefore, the product of all elements in $S$ must equal the product of all elements in $G$.</p>
+            <p>Because multiplying by a group element is a bijection, the set $S$ is exactly the same as the set $G$, just listed in a different order. Therefore, the product of all elements in $S$ must equal the product of all elements in $G$.</p>
 
-            <p>Evaluating the product of all elements in $S$, and heavily using the fact that $G$ is Abelian (so we can rearrange the terms), we get:</p>
+            <p>Evaluating the product of all elements in $S$, and using the fact that $G$ is Abelian, we get:</p>
 
             <p>$$(g a_1)(g a_2) \cdots (g a_k) = g^k (a_1 a_2 \cdots a_k) = g^k x$$</p>
 
