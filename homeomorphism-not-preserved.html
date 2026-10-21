@@ -16,124 +16,110 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        * { box-sizing: border-box; }
         body {
-            background-color: #ffffff; 
-            color: #374151; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            line-height: 1.7;
+            padding: 40px 20px;
+            font-size: 18px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 80px 40px;
-        }
-        h1 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 2.5em;
-            font-weight: normal;
-            line-height: 1.2;
-            margin: 0 0 10px 0;
-            color: #111827; 
-        }
+        .container { max-width: 800px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 50px; }
+        h1 { font-size: 2.2em; font-weight: normal; margin: 0 0 10px 0; }
         .meta {
-            font-size: 0.95em;
-            color: #6b7280; 
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-        .divider {
-            border-top: 1px solid #e5e7eb; 
-            margin-bottom: 40px;
-        }
-        .content {
-            font-size: 1.1em;
-        }
-        .content p {
-            margin-bottom: 20px;
-        }
-        .content h2 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 1.5em;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            color: #111827;
-        }
-        .problem-box {
-            background-color: #f9fafb;
-            border-left: 4px solid #4f46e5;
-            padding: 20px;
-            margin-bottom: 30px;
             font-style: italic;
+            color: #555555;
+            font-size: 0.95em;
         }
-        .back-link {
+        .nav-link {
             display: inline-block;
             margin-bottom: 40px;
-            font-size: 0.9em;
+            color: #0056b3;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #4f46e5; 
-            text-decoration: none;
-            font-weight: 600;
         }
-        .back-link:hover {
-            color: #312e81; 
-            text-decoration: underline;
+        .nav-link:hover { text-decoration: underline; }
+        .theorem {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fcfcfc;
+            border-left: 3px solid #333333;
+            font-style: italic;
         }
-        ul {
-            margin-bottom: 20px;
-        }
-        li {
+        .theorem strong {
+            font-style: normal;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
             margin-bottom: 10px;
+            color: #222222;
+        }
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            color: #222222;
+        }
+        p { margin-top: 0; margin-bottom: 15px; text-align: justify; }
+        ul { padding-left: 25px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+        @media (max-width: 600px) {
+            body { padding: 20px 15px; font-size: 16px; }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <a href="interesting-math.html" class="back-link">&larr; Back to Interesting Math</a>
+        <a href="interesting-math.html" class="nav-link">&larr; Back to Interesting Math</a>
         
-        <h1>When the Discrete Topology Does Not Imply the Discrete Metric</h1>
-        <div class="meta">30 Sep, 2026 &bull; Topology &bull; Metric Spaces</div>
-        
-        <div class="divider"></div>
+        <header>
+            <h1>When the Discrete Topology Does Not Imply the Discrete Metric</h1>
+            <div class="meta">30 Sep, 2026 &bull; Topology &bull; Metric Spaces</div>
+        </header>
 
-        <div class="content">
-            <p>You may be familiar with the discrete metric on an arbitrary set $X$. The discrete metric makes every subset of $X$ an open set. If we let $\mathcal{T}_{X}$ denote the topology induced by the discrete metric on $X$, then</p>
-            
-            $$ \mathcal{T}_{X} = \{A \mid A \subseteq X\} $$
-            
-            <p>Recall that the discrete metric function $e$ on $X \times X$ is defined as:</p>
-            
-            $$ e(x,y) = \begin{cases} 0 & \text{if } x = y, \\ 1 & \text{if } x \neq y. \end{cases} $$
-            
-            <p>So, we can say that every Cauchy sequence in $(X,e)$ is convergent in $X$.</p>
-            
-            <div class="problem-box">
-                <strong>Question:</strong> Suppose we have a metric $d$ on $X$ such that the topology induced by $d$ is the discrete topology $\mathcal{T}_{X} = \{A \mid A \subseteq X\}$. Does this imply that $d$ is the discrete metric?
-            </div>
-            
-            <h2>The Counterexample</h2>
-            
-            <p>No, it does not. We can define a metric $d : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{R}$ as follows:</p>
-            
-            $$ d(m,n) = \left| \frac{1}{n} - \frac{1}{m} \right| $$
-            
-            <p>where $|\cdot|$ denotes the usual Euclidean metric on $\mathbb{R}$.</p>
-            
-            <ul>
-                <li>Every subset of $\mathbb{N}$ is open in this metric space. Thus, $\mathcal{T}_{\mathbb{N}} = \{A \mid A \subseteq \mathbb{N}\}$.</li>
-                <li>However, this space is not complete. Consider the sequence $x_{n} = n$. It is Cauchy but not convergent in $(\mathbb{N},d)$.</li>
-            </ul>
-            
-            <p>This counterexample shows that even if the topology induced by a metric is the discrete topology, the metric itself need not be the discrete metric.</p>
-            
-            <h2>Conclusion</h2>
-            <p>Moreover, if you are familiar with the concept of equivalent metrics, observe that $(\mathbb{N}, d)$ is homeomorphic to the metric space $(\mathbb{N}, |\cdot|)$. Hence, this example perfectly illustrates that <strong>completeness is not preserved under homeomorphism</strong>.</p>
+        <p>You may be familiar with the discrete metric on an arbitrary set $X$. The discrete metric makes every subset of $X$ an open set. If we let $\mathcal{T}_{X}$ denote the topology induced by the discrete metric on $X$, then</p>
+        
+        $$ \mathcal{T}_{X} = \{A \mid A \subseteq X\} $$
+        
+        <p>Recall that the discrete metric function $e$ on $X \times X$ is defined as:</p>
+        
+        $$ e(x,y) = \begin{cases} 0 & \text{if } x = y, \\ 1 & \text{if } x \neq y. \end{cases} $$
+        
+        <p>So, we can say that every Cauchy sequence in $(X,e)$ is convergent in $X$.</p>
+
+        <div class="theorem">
+            <strong>Question</strong>
+            Suppose we have a metric $d$ on $X$ such that the topology induced by $d$ is the discrete topology $\mathcal{T}_{X} = \{A \mid A \subseteq X\}$. Does this imply that $d$ is the discrete metric?
         </div>
+        
+        <h2>The Counterexample</h2>
+        
+        <p>No, it does not. We can define a metric $d : \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{R}$ as follows:</p>
+        
+        $$ d(m,n) = \left| \frac{1}{n} - \frac{1}{m} \right| $$
+        
+        <p>where $|\cdot|$ denotes the usual Euclidean metric on $\mathbb{R}$.</p>
+        
+        <ul>
+            <li>Every subset of $\mathbb{N}$ is open in this metric space. Thus, $\mathcal{T}_{\mathbb{N}} = \{A \mid A \subseteq \mathbb{N}\}$.</li>
+            <li>However, this space is not complete. Consider the sequence $x_{n} = n$. It is Cauchy but not convergent in $(\mathbb{N},d)$.</li>
+        </ul>
+        
+        <p>This counterexample shows that even if the topology induced by a metric is the discrete topology, the metric itself need not be the discrete metric.</p>
+        
 
     </div>
 </body>
