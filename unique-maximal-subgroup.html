@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Maximal Subgroup</title>
     
+    <!-- MathJax for LaTeX rendering -->
     <script>
         MathJax = {
             tex: {
@@ -16,108 +17,123 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            background-color: #ffffff; 
-            color: #374151; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            /* LaTeX-like academic font stack */
+            font-family: 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            line-height: 1.7;
+            padding: 40px 20px;
+            font-size: 18px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 80px 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
         }
         h1 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: normal;
-            line-height: 1.2;
             margin: 0 0 10px 0;
-            color: #111827; 
         }
         .meta {
-            font-size: 0.95em;
-            color: #6b7280; 
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-        .divider {
-            border-top: 1px solid #e5e7eb; 
-            margin-bottom: 40px;
-        }
-        .content {
-            font-size: 1.1em;
-        }
-        .content p {
-            margin-bottom: 20px;
-        }
-        .content h2 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 1.5em;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            color: #111827;
-        }
-        .problem-box {
-            background-color: #f9fafb;
-            border-left: 4px solid #4f46e5;
-            padding: 20px;
-            margin-bottom: 30px;
             font-style: italic;
+            color: #555555;
+            font-size: 0.95em;
         }
-        .back-link {
+        .nav-link {
             display: inline-block;
             margin-bottom: 40px;
-            font-size: 0.9em;
+            color: #0056b3;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #4f46e5; 
-            text-decoration: none;
-            font-weight: 600;
         }
-        .back-link:hover {
-            color: #312e81; 
+        .nav-link:hover {
             text-decoration: underline;
+        }
+        
+        /* Theorem Environment */
+        .theorem {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fcfcfc;
+            border-left: 3px solid #333333;
+            font-style: italic;
+        }
+        .theorem strong {
+            font-style: normal;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 10px;
+            color: #222222;
+        }
+
+        /* Proof Environment */
+        .proof {
+            margin: 30px 0;
+        }
+        .proof-title {
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .qed {
+            float: right;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            body { padding: 20px 15px; font-size: 16px; }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <a href="interesting-math.html" class="back-link">&larr; Back to Interesting Math</a>
+        <a href="interesting-math.html" class="nav-link">&larr; Return to Interesting Math</a>
         
-        <h1>Unique Maximal Subgroup</h1>
-        <div class="meta">30 Sep, 2026 &bull; Group Theory &bull; Source: Algebra: A Graduate Course by I. Martin Isaacs</div>
-        
-        <div class="divider"></div>
+        <header>
+            <h1>Unique Maximal Subgroup</h1>
+            <div class="meta">Inspired by I. Martin Isaacs' Algebra: A Graduate Course</div>
+        </header>
 
-        <div class="content">
-            <div class="problem-box">
-                <strong>Problem:</strong> Let $G$ be a finite group such that it has a unique maximal subgroup. Prove that $G$ has prime power order.
-            </div>
-            
-            <h2>My Initial Thoughts</h2>
-            <p>At first, I thought of using an induction argument. If we let $H$ be the unique maximal subgroup, then $H$ must be normal and its index is prime. I even considered using Zorn's Lemma to invoke the fact that every proper subgroup is contained in a maximal subgroup. However, since $G$ is finite, Zorn's Lemma is entirely unnecessary! I later realized that this is actually an easy problem if you break it down into two simple parts.</p>
-            
-            <h2>The Proof</h2>
-            
-            <p><strong>Part 1: Prove that $G$ is cyclic.</strong></p>
-            <p>Let $H$ be the unique maximal subgroup of $G$. Since $H$ is a proper subgroup, there exists some element $g \in G$ such that $g \notin H$. Consider the cyclic subgroup generated by $g$, denoted $\langle g \rangle$.</p>
-            
-            <p>If $\langle g \rangle$ were a proper subgroup of $G$, it would have to be contained in <em>some</em> maximal subgroup. But since $H$ is the <em>only</em> maximal subgroup, we would have $\langle g \rangle \subseteq H$, which immediately implies $g \in H$. This contradicts our initial assumption that $g \notin H$.</p>
-            
-            <p>Therefore, $\langle g \rangle$ cannot be a proper subgroup. It must be that $\langle g \rangle = G$. Hence, $G$ is cyclic.</p>
+        <p>This is an elegant result demonstrating how strongly the subgroup lattice controls the structure of a finite group. When a finite group is constrained to have exactly one maximal subgroup, it rigidly forces the group to be a cyclic prime-power group.</p>
 
-            <p><strong>Part 2: Prime Divisors of the Order of $G$</strong></p>
-            <p>Now that we know $G$ is cyclic, we can use the fundamental theorem of cyclic groups. If there exist two distinct prime divisors of the order of $G$, say $p$ and $q$, then there must exist a unique subgroup of index $p$ and a unique subgroup of index $q$.</p>
+        <div class="theorem">
+            <strong>Theorem</strong>
+            Let $G$ be a finite group. If $G$ has a unique maximal subgroup $M$, then the order of $G$ is a prime power (i.e., $G$ is a $p$-group), and moreover, $G$ is cyclic.
+        </div>
+
+        <div class="proof">
+            <div class="proof-title">Proof.</div>
+            <p>Let $M$ be the unique maximal subgroup of $G$. Since every proper subgroup of a finite group is contained in some maximal subgroup, and $M$ is the <em>only</em> maximal subgroup, it follows that $M$ contains <em>every</em> proper subgroup of $G$.</p>
             
-            <p>Since subgroups of prime index are maximal, $G$ would have at least two distinct maximal subgroups. But we are given that $G$ has a unique maximal subgroup. Thus, it is impossible for the order of $G$ to have more than one distinct prime divisor.</p>
+            <p>Suppose $G$ is not cyclic. Then for every element $x \in G$, the cyclic subgroup generated by $x$, denoted $\langle x \rangle$, must be a proper subgroup of $G$. Therefore, by our previous observation, $\langle x \rangle \le M$ for all $x \in G$. But this implies that every element of $G$ is contained in $M$, meaning $G = M$. This is a contradiction, since a maximal subgroup is by definition a proper subgroup. Thus, $G$ must be cyclic.</p>
             
-            <p>Conclusion: The order of $G$ must be a prime power.</p>
+            <p>Since $G$ is a finite cyclic group, it is isomorphic to $\mathbb{Z}/n\mathbb{Z}$ for some integer $n > 1$. The subgroups of $\mathbb{Z}/n\mathbb{Z}$ correspond bijectively to the divisors of $n$, and the maximal subgroups correspond specifically to the prime divisors of $n$.</p>
+
+            <p>Because $G$ has exactly one maximal subgroup, $n$ must have exactly one prime divisor. Therefore, $n = p^k$ for some prime $p$ and integer $k \ge 1$. Hence, $|G| = p^k$, so $G$ is a $p$-group.</p>
+            <span class="qed">$\blacksquare$</span>
         </div>
 
     </div>
