@@ -9,127 +9,96 @@
         * {
             box-sizing: border-box;
         }
-
         body {
+            background-color: #ffffff;
+            color: #111111;
+            /* LaTeX-like academic font stack */
+            font-family: 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
+            line-height: 1.6;
             margin: 0;
-            color: #30312d;
-            background: #e0f2fe;
-            font-family: Arial, sans-serif;
+            padding: 50px 20px;
+            font-size: 18px;
         }
-
-        .hero,
-        main {
-            max-width: 1100px;
+        .container {
+            max-width: 800px;
             margin: 0 auto;
-            padding-right: 32px;
-            padding-left: 32px;
         }
-
-        .hero {
-            padding-top: 90px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid #d8d2c6;
-        }
-
         h1 {
-            margin: 0 0 24px;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: clamp(56px, 9vw, 110px);
-            line-height: 0.95;
+            font-size: 2.5em;
             font-weight: normal;
+            margin: 0 0 40px 0;
+            border-bottom: 1px solid #eeeeee;
+            padding-bottom: 15px;
+            text-align: center;
         }
-
-        .intro {
-            max-width: 720px;
-            color: #66645e;
-            font-size: 20px;
-            line-height: 1.8;
-        }
-
-        main {
-            padding-top: 32px;
-            padding-bottom: 60px;
-        }
-
-        section {
-            display: grid;
-            grid-template-columns: 230px 1fr;
-            gap: 34px;
-            padding: 28px 0;
-            border-bottom: 1px solid #d8d2c6;
-        }
-
-        h2 {
-            margin: 0;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 30px;
-            font-weight: normal;
-        }
-
         p {
             margin-top: 0;
-            line-height: 1.8;
+            margin-bottom: 15px;
+            text-align: justify;
         }
-
-        ul {
-            margin: 0;
-            padding-left: 22px;
-        }
-
-        li {
-            margin-bottom: 14px;
-            line-height: 1.7;
-        }
-
         a {
-            color: #465c70;
+            color: #0056b3;
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
-        .back-link {
+        .nav-link {
             display: inline-block;
-            margin-top: 30px;
+            margin-bottom: 40px;
+            color: #0056b3;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+        .pdf-link-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .pdf-link {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background-color: #333333;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .pdf-link:hover {
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
         }
 
-        @media (max-width: 650px) {
-            .hero {
-                padding-top: 56px;
-            }
-
-            section {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; font-size: 16px; }
+            h1 { font-size: 2em; margin-bottom: 30px; }
         }
     </style>
 </head>
-
 <body>
-    <header class="hero">
-        <h1>Problems in<br>Group Theory</h1>
-        <p class="description">
-            The motive of this problem set is to collect problems that are helpful in developing the theory and verifying whether you understand the concepts or not. Initially, I intended to divide these problems into three parts: easy, medium, and hard. However, "hard" is highly subjective, and what I find difficult, someone else might find trivial. Following a suggestion from my friend Tanush Seal, I decided instead to include problems that specifically helped me understand the theory better and from which I learned something valuable. I will continue to add more questions to this list over time.
-        </p>
-    </header>
+    <div class="container">
+        
+        <a href="index.html" class="nav-link">&larr; Back to my website</a>
+        
+        <h1>Problems in Group Theory</h1>
+        
+        <p>The motive of this problem set is to collect problems that are helpful in developing the theory and verifying whether you understand the concepts or not. Initially, I intended to divide these problems into three parts: easy, medium, and hard. However, "hard" is highly subjective, and what I find difficult, someone else might find trivial. Following a suggestion from my friend Tanush Seal, I decided instead to include problems that specifically helped me understand the theory better and from which I learned something valuable. I will continue to add more questions to this list over time.</p>
 
-    <main>
-        <section>
-            <h2>Problem Collection</h2>
-            <div>
-                <p>
-            
-    <a href="Group_theory.pdf" target="_blank" rel="noopener">
-        View Group Theory Problems (PDF)
-    </a>
-</p>
-            </div>
-        </section>
+        <div class="pdf-link-container">
+            <a href="Group_theory.pdf" target="_blank" rel="noopener" class="pdf-link">View Group Theory Problems (PDF)</a>
+        </div>
 
-        <a class="back-link" href="index.html">← Back to my website</a>
-    </main>
+    </div>
 </body>
 </html>
