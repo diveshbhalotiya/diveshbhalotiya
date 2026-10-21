@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elements of a Finite Abelian Group</title>
     
+    <!-- MathJax for LaTeX rendering -->
     <script>
         MathJax = {
             tex: {
@@ -16,117 +17,128 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        * { box-sizing: border-box; }
         body {
-            background-color: #ffffff; 
-            color: #374151; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            line-height: 1.7;
+            padding: 40px 20px;
+            font-size: 18px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 80px 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
         }
         h1 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: normal;
-            line-height: 1.2;
             margin: 0 0 10px 0;
-            color: #111827; 
         }
         .meta {
-            font-size: 0.95em;
-            color: #6b7280; 
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-        .divider {
-            border-top: 1px solid #e5e7eb; 
-            
-            margin-bottom: 40px;
-        }
-        .content {
-            font-size: 1.1em;
-        }
-        .content p {
-            margin-bottom: 20px;
-        }
-        .content h2 {
-            font-family: Palatino, "Palatino Linotype", Georgia, serif;
-            font-size: 1.5em;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            color: #111827;
-        }
-        .problem-box {
-            background-color: #f9fafb;
-            border-left: 4px solid #4f46e5;
-            padding: 20px;
-            margin-bottom: 30px;
             font-style: italic;
+            color: #555555;
+            font-size: 0.95em;
         }
-        .back-link {
+        .nav-link {
             display: inline-block;
             margin-bottom: 40px;
-            font-size: 0.9em;
+            color: #0056b3;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #4f46e5; 
-            text-decoration: none;
-            font-weight: 600;
         }
-        .back-link:hover {
-            color: #312e81; 
+        .nav-link:hover {
             text-decoration: underline;
+        }
+        .theorem {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fcfcfc;
+            border-left: 3px solid #333333;
+            font-style: italic;
+        }
+        .theorem strong {
+            font-style: normal;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 10px;
+            color: #222222;
+        }
+        .proof {
+            margin: 30px 0;
+        }
+        .proof-title {
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .qed {
+            float: right;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        @media (max-width: 600px) {
+            body { padding: 20px 15px; font-size: 16px; }
+            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         
-        <a href="interesting-math.html" class="back-link">&larr; Back to Interesting Math</a>
+        <a href="interesting-math.html" class="nav-link">&larr; Return to Interesting Math</a>
         
-        <h1>Elements of a Finite Abelian Group</h1>
-        <div class="meta">30 Sep 2026 &bull; Group Theory &bull; Inspired by An Infinitely Large Napkin</div>
-        
-        <div class="divider"></div>
+        <header>
+            <h1>Elements of a Finite Abelian Group</h1>
+            <div class="meta">A proof without invoking Lagrange's Theorem</div>
+        </header>
 
-        <div class="content">
-            <div class="problem-box">
-                <strong>Problem:</strong> Let $G$ be a finite Abelian group of cardinality $k$. Show that for each $g \in G$, $g^k = e$.
-            </div>
+        <p>This is a wonderfully elegant trick. While it is standard to use Lagrange's Theorem to state that the order of an element divides the order of the group, for finite Abelian groups, we can prove this directly using a clever multiplication argument.</p>
+
+        <div class="theorem">
+            <strong>Theorem</strong>
+            Let $G$ be a finite Abelian group of order $k$. For any element $g \in G$, we have $g^k = e$, where $e$ is the identity element of $G$.
+        </div>
+
+        <div class="proof">
+            <div class="proof-title">Proof.</div>
+            <p>Let the elements of our group be $G = \{a_1, a_2, \dots, a_k\}$. Since $G$ is finite, we can define a single element $x \in G$ to be the product of all elements in the group:</p>
             
-            <h2>Context & Initial Thoughts</h2>
-            <p>I believe the first time I saw this question was in Evan Chen's <em>An Infinitely Large Napkin</em>. If you look closely, this result is very similar to Lagrange's theorem, which tells us that the order of an element divides the order of the group if the group is finite. (As an interesting aside, this makes you ponder infinite groups where every element has a finite order—these are known as torsion groups!)</p>
+            <p>$$x = a_1 a_2 \cdots a_k$$</p>
+
+            <p>Now, let $g$ be any arbitrary element in $G$. Consider the set formed by multiplying every element of $G$ by $g$:</p>
             
-            <p>After trying to solve this for a little while, I asked for a hint on Discord, and someone provided a very clever, elegant perspective.</p>
+            <p>$$S = \{g a_1, g a_2, \dots, g a_k\}$$</p>
+
+            <p>Because multiplying by a group element is a bijection (specifically, a permutation of the group), the set $S$ is exactly the same as the set $G$, just listed in a different order. Therefore, the product of all elements in $S$ must equal the product of all elements in $G$.</p>
+
+            <p>Evaluating the product of all elements in $S$, and heavily using the fact that $G$ is Abelian (so we can rearrange the terms), we get:</p>
+
+            <p>$$(g a_1)(g a_2) \cdots (g a_k) = g^k (a_1 a_2 \cdots a_k) = g^k x$$</p>
+
+            <p>Since the product of the elements in $S$ equals the product of the elements in $G$, we can equate them:</p>
+
+            <p>$$g^k x = x$$</p>
+
+            <p>Finally, we multiply both sides on the right by $x^{-1}$, yielding:</p>
+
+            <p>$$g^k = e$$</p>
             
-            <h2>The Proof</h2>
-            
-            <p>Because the group is Abelian, the order in which we multiply the elements of $G$ does not matter.</p>
-            
-            <p>Let the elements of our group be $G = \{g_1, g_2, \dots, g_k\}$.</p>
-            
-            <p>Now, fix an arbitrary element $g \in G$. If we multiply every element in $G$ by this $g$, we get a new set: $gG = \{gg_1, gg_2, \dots, gg_k\}$. Since left-multiplication by a group element is a bijection (a permutation of the group elements), this new set $gG$ is exactly the same as the original set $G$.</p>
-            
-            <p>Since the sets are identical and $G$ is Abelian, taking the product of all elements in $gG$ must equal the product of all elements in $G$:</p>
-            
-            $$ \prod_{i=1}^{k} (gg_i) = \prod_{i=1}^{k} g_i $$
-            
-            <p>Because the group is Abelian, we can pull the $g$'s to the front:</p>
-            
-            $$ g^k (g_1 g_2 \cdots g_k) = (g_1 g_2 \cdots g_k) $$
-            
-            <p>Since $(g_1 g_2 \cdots g_k)$ is just an element of the group, we can multiply both sides by its inverse to cancel it out. This leaves us with:</p>
-            
-            $$ g^k = e $$
-            
-            <p>And the proof is complete.</p>
+            <span class="qed">$\blacksquare$</span>
         </div>
 
     </div>
