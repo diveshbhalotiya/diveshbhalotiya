@@ -69,6 +69,7 @@
             text-decoration: none;
             padding: 12px 24px;
             border-radius: 4px;
+            margin: 0 10px;
             transition: background-color 0.2s;
         }
         .download-link:hover {
@@ -80,6 +81,7 @@
         @media (max-width: 600px) {
             body { padding: 30px 15px; font-size: 16px; }
             h1 { font-size: 1.8em; }
+            .download-link { display: block; margin: 10px auto; }
         }
     </style>
 </head>
@@ -95,7 +97,7 @@
         <p>This document contains a curated list of foundational problems in point-set and algebraic topology, focusing on homotopy equivalences, retractions, locally connected spaces, fundamental groups, and deformation retracts.</p>
 
         <div class="problem">
-            <p><strong>Question 1:</strong> Let $A$ and $X$ be topological spaces, and let $i: A \to X$ be a homotopy equivalence. Does this imply that $A$ is a retract of $X$?</p>
+            <p><strong>Question 1:</strong> Let $A$ and $X$ be topological spaces, and let $i: A \to X$ be a homotopy equivalence. Does this imply that $A$ is a retract of $X$?%</p>
         </div>
 
         <div class="problem">
@@ -129,9 +131,10 @@
             <p><strong>Question 7:</strong> Does a strong deformation retract imply a deformation retract? What about the converse? Consider the space $L$ from the previous problem and investigate explicit homotopies for its deformation retraction onto the point $(1,0)$.</p>
         </div>
 
-        <!-- Download Button -->
+        <!-- Download Buttons -->
         <div class="download-container">
-            <a href="algebraic-topology-problems.pdf" download class="download-link">Download PDF Version</a>
+            <a href="algebraic_topology_2.pdf" download class="download-link">Download Problems PDF</a>
+            <a href="algebraic_topology.pdf" download class="download-link">Download Solutions PDF</a>
         </div>
 
     </div>
