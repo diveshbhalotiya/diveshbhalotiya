@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebraic Topology: Selected Problems</title>
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            background-color: #ffffff;
+            color: #111111;
+            font-family: 'Computer Modern', 'Latin Modern Roman', 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 50px 20px;
+            font-size: 18px;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        .nav-link {
+            display: inline-block;
+            margin-bottom: 40px;
+            color: #0056b3;
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-link:hover { text-decoration: underline; }
+        header { text-align: center; margin-bottom: 40px; }
+        h1 { font-size: 2.2em; font-weight: normal; margin: 0 0 10px 0; }
+        p { margin-top: 0; margin-bottom: 20px; text-align: justify; }
+        .problem {
+            margin: 30px 0;
+        }
+        .problem strong {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #222222;
+        }
+        
+        /* Download Button Styles */
+        .download-container {
+            margin-top: 60px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .download-link {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background-color: #333333;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .download-link:hover {
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 30px 15px; font-size: 16px; }
+            h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <a href="algebraic-topology.html" class="nav-link">&larr; Back to Algebraic Topology</a>
+        
+        <header>
+            <h1>Algebraic Topology: Selected Problems</h1>
+        </header>
+
+        <p>This document contains a curated list of foundational problems in point-set and algebraic topology, focusing on homotopy equivalences, retractions, locally connected spaces, fundamental groups, and deformation retracts.</p>
+
+        <div class="problem">
+            <p><strong>Question 1:</strong> Let $A$ and $X$ be topological spaces, and let $i: A \to X$ be a homotopy equivalence. Does this imply that $A$ is a retract of $X$?</p>
+        </div>
+
+        <div class="problem">
+            <p><strong>Question 2:</strong> Let $X$ be a topological space. Suppose that for every $x \in X$ and every neighborhood $U$ of $x$, there exists a connected neighborhood $V$ of $x$ such that $x \in V \subseteq U$. Show that local connectedness is preserved under retractions, and verify whether $X = I \times \{0\} \cup A \times I$ (where $A = \{0, 1, \frac{1}{2}, \dots\}$) is locally connected.</p>
+        </div>
+
+        <div class="problem">
+            <p><strong>Question 3:</strong> Let $X = I \times \{0\} \cup A \times I$, where $A = \{0, 1, \frac{1}{2}, \frac{1}{3}, \dots\}$. Does there exist a retraction $r: I \times I \to X$?</p>
+        </div>
+
+        <div class="problem">
+            <p><strong>Question 4:</strong> Does a local homeomorphism necessarily imply a covering map?</p>
+        </div>
+
+        <div class="problem">
+            <p><strong>Question 5:</strong> Find a space $X$ and base points such that $\pi_1(X, x_0) \neq \pi_1(X, \tilde{x}_0)$.</p>
+        </div>
+
+        <div class="problem">
+            <p><strong>Question 6:</strong> Let $L = \bigcup_{n=0}^{\infty} L_n$, where $L_0 = I \times \{0\}$ and $L_n = \left\{ \left(x, \frac{1}{n}\right) \mid x \in [0, 1] \right\}$ for $n \in \mathbb{N}$. Does there exist a strong deformation $F: L \times I \to L$ satisfying:</p>
+            $$
+            \begin{aligned}
+                F(s, 0) &= s \\
+                F(s, 1) &= (1, 0) \\
+                F((1, 0), t) &= (1, 0) \quad \forall t \in I?
+            \end{aligned}
+            $$
+        </div>
+
+        <div class="problem">
+            <p><strong>Question 7:</strong> Does a strong deformation retract imply a deformation retract? What about the converse? Consider the space $L$ from the previous problem and investigate explicit homotopies for its deformation retraction onto the point $(1,0)$.</p>
+        </div>
+
+        <!-- Download Button -->
+        <div class="download-container">
+            <a href="algebraic-topology-problems.pdf" download class="download-link">Download PDF Version</a>
+        </div>
+
+    </div>
+</body>
+</html>
